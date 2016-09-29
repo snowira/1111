@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/xiu.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/lady.css"/>
+	<link rel="stylesheet" type="text/css" href="css/fashion.css"/>
+	<link rel="stylesheet" type="text/css" href="css/find.css"/>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/xiu.js"></script>
+	<script type="text/javascript" src="js/find.js"></script>
+	<script type="text/javascript" src="js/tabSwitch.js"></script>
+	<script type="text/javascript" src="js/xiuindex.js"></script>
+	<script type="text/javascript" src="js/perfect_startMove.js"></script>
+	<script src="jquery.cookie.js"></script>
+	<script type="text/javascript" src="tool.js"></script>
+	<script type="text/javascript">
+	var uul = null;
+	var aali = null;
+	var iLen = 0
+	window.onload = function(){
+		/*var num = document.getElementById("num");
+		var car = document.getElementsByClassName("topLink_span");
+		var good = document.getElementById("topLink_goods");
+		if(getCookie("goods") == null){
+			num.innerHTML = 0;
+			car.innerHTML = 0;
+		}else{
+			num.innerHTML = getCookie("goods");
+			car.innerHTML = getCookie("goods");
+			good.html = "";
+		}*/
+		uul = document.getElementById("wpbUl");
+		aali = wpbUl.getElementsByTagName("li");
+		iLen = aali.length;
+		ajax("get","find.json","",function(data){
+		var aar = JSON.parse(data);
+		if(!aar.length){
+			return;
+		}
+		for(var i = 0;i < aar.length;i++){
+			var _index = getShort();
+			var ddiv = document.createElement("div");
+			var ooimg = document.createElement("img");
+			var aaa = document.createElement("a");
+			ooimg.src = aar[i].image;
+			ooimg.style.width = "380px";
+			ooimg.style.height = (380 / aar[i].width * aar[i].height) + "px";
+			aaa.appendChild(ooimg);
+			/************************************************/
+			var pic = aaa.getElementsByTagName("img");
+				for(var j = 0;j< pic.length;j++){
+						pic[j].alpha = 100;
+						pic[j].onmouseover = function(){
+							startmove2(this, 70);
+						}
+						pic[j].onmouseout = function(){
+							startmove2(this, 100);
+						}
+					}
+			/************************************************/
+			var oop = document.createElement("p");
+			var hh = document.createElement("h3");
+			oop.innerHTML = aar[i].title;
+			hh.innerHTML = aar[i].oP;
+			aaa.appendChild(oop);
+			aaa.appendChild(hh);
+			ddiv.appendChild(aaa);
+			aali[_index].appendChild(ddiv);
+
+			/*var pic = aaa.getElementsByTagName("img");
+			for(var i = 0;i< pic.length;i++){
+						pic[i].alpha = 100;
+						pic[i].onmouseover = function(){
+							startmove2(this, 70);
+						}
+						pic[i].onmouseout = function(){
+							startmove2(this, 100);
+						}
+					}*/
+		}
+
+/*********************************************************************/
+ajax("get", "xiu.json", "", function(data){
+				//2.将数据转成对象
+				var arr = JSON.parse(data)._data;
+				tabSwitch("bag1", arr);
+				var arr1 = JSON.parse(data)._data1;
+				tabSwitch1("bag1", arr1);
+				var arr2 = JSON.parse(data)._data2;
+				tabSwitch2("bag1", arr2);
+
+				var arr3 = JSON.parse(data).dress1;
+				tabSwitch("bag2", arr3);
+				var arr4 = JSON.parse(data)._data1;
+				tabSwitch1("bag2", arr4);
+				var arr5 = JSON.parse(data)._data2;
+				tabSwitch2("bag2", arr5);
+
+				var arr6 = JSON.parse(data).shoe;
+				tabSwitch("bag3", arr6);
+				var arr7 = JSON.parse(data)._data1;
+				tabSwitch1("bag3", arr7);
+				var arr8 = JSON.parse(data)._data2;
+				tabSwitch2("bag3", arr8);
+			});
+
+	var num = document.getElementById("num");
+		var car = document.getElementsByClassName("topLink_span");
+		var good = document.getElementById("topLink_goods");
+		if(getCookie("goods") == null){
+			num.innerHTML = 0;
+			car.innerHTML = 0;
+		}else{
+			num.innerHTML = getCookie("goods");
+			car.innerHTML = getCookie("goods");
+			good.html = "";
+		}		
+	function tabSwitch(div_id,arr){
+	var bag = document.getElementById(div_id);
+	var aUl = bag.getElementsByTagName("ul");
+		for(var i = 0 ; i < arr.length ; i++){
+            var aLi = document.createElement("li");
+ 			var aLia = document.createElement("a");
+           	aLia.innerHTML = arr[i].title;
+            aUl[0].appendChild(aLi);
+            aLi.appendChild(aLia);
+            $("#ul1").find("li").eq(0).attr("class","ulli");
+            $(".ulli").siblings().attr("class","ulli1");
+		}
+
+	}
+	
+	function tabSwitch1(div_id,arr1){
+	var bag = document.getElementById(div_id);
+	var aUl = bag.getElementsByTagName("ul");
+		for(var i = 0 ; i < arr1.length ; i++){
+            var aLi = document.createElement("li");
+ 			var aLia = document.createElement("a");
+           	aLia.innerHTML = arr1[i].title;
+            aUl[1].appendChild(aLi);
+            aLi.appendChild(aLia);
+             $("#ul2").find("li").eq(0).attr("class","ulli");
+		}
+
+	}
+
+	function tabSwitch2(div_id,arr2){
+	var bag = document.getElementById(div_id);
+	var aUl = bag.getElementsByTagName("ul");
+		for(var i = 0 ; i < arr2.length ; i++){
+            var aLi = document.createElement("li");
+ 			var aLia = document.createElement("a");
+           	aLia.innerHTML = arr2[i].title;
+            aUl[2].appendChild(aLi);
+            aLi.appendChild(aLia);
+		}
+	}
+/*********************************************************************/
+	});
+
+
+		function getShort(){
+		var index = 0;
+		var ih = aali[index].offsetHeight;
+		for(var i = 1;i < iLen;i++){
+			if(ih > aali[i].offsetHeight){
+				index = i;
+				ih = aali[i].offsetHeight;
+			}
+		}
+		return index;
+	}
+
+	var timer = null;
+	function startmove2(obj, itarget){
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				var speed = (itarget - obj.alpha) / 8;
+				speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+				if(obj.alpha == itarget){
+					clearInterval(obj.timer);
+				}else{
+					obj.alpha += speed;
+					obj.style.filter = "alpha(opacity:" + obj.alpha + ")";
+					obj.style.opacity = obj.alpha / 100;
+				}
+			},10)
+		}
+
+	
+}
+
+	</script>
+</head>
+<body>
+	<!--************************top**********************-->
+	<div class = "xiuhead" id = "xiutop">
+		<div id = "wrap">
+			<div class = "topMain">
+				<div class = "login fl">
+					<ul class = "topLink ">
+						<li class = "topLink_login"><a href = "#1" alt = "" title = "">登录/注册</a></li>
+
+						<li id = "topLink_car"><a class = "xiuCar" href = "car.html" alt = "" title = "">购物袋<span class = "topLink_span">0</span>件</a>
+						<div id = "topLink_goods"><span>购物袋暂时没有商品!</span></div>
+						</li>
+						
+						<li id = "topLink_xiu"><a class = "xiu" href = "#3" alt = "" title = "">我的走秀</a>
+						<div id = "xiu_xiu" style="background-color: #fff;"><a href="#">我的订单</a><a href="#">自助退货</a><a href="#">我的收藏</a><a href="#">帮助中心</a><a href="#">全部吐槽</a></div>
+						</li>
+					</ul>
+				</div>
+				<div class = "topMain_img fl"></div>
+			<div class = "topMain_search fr">
+				<input class = "search_text" type = "text" placeholder = "请搜索Stan smith试试" />
+				<input type = "button" class = "search_btn"/>
+			</div>
+			<div class = "nav fl">
+				<ul>
+					<li><a class = "firstPage" href = "index.html" alt = "" title = "">首页</a></li>
+					<li><a href = "#" alt = "" title = "">新品</a></li>
+					<li><a href = "#" alt = "" title = "">男士</a></li>
+					<li><a href = "lady.html" alt = "" title = "">女士</a></li>
+					<li><a href = "#" alt = "" title = "">品牌</a></li>
+					<li><a class = "find" href = "find.html" alt = "" title = "">发现</a></li>
+					<li><a href = "#" alt = "" title = "">专题</a></li>
+					<li><a href = "#" alt = "" title = "">手机走秀</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+<!--************************nav**********************-->
+<div id = "listNn">
+	<div id = "wrap">
+		<ul>
+			<li id="bagg1"><a class = "pag" href = "#" alt = "" title = ""><span>包袋</span></a>
+				<div id = "bag1"><ul id = "ul1"></ul><ul id = "ul2"></ul><ul id = "ul3"></ul></div>
+			</li>
+			<li id="bagg2"><a href = "#" alt = "" title = ""><span>服装</span></a>
+				<div id = "bag2"><ul id = "ul4"></ul><ul id = "ul5"></ul><ul id = "ul6"></ul></div>
+			</li>
+			<li id="bagg3"><a href = "#" alt = "" title = ""><span>鞋靴</span></a>
+				<div id = "bag3"><ul></ul><ul id = "ul7"></ul><ul id = "ul8"></ul></div>
+			</li>
+			<li id="bagg4"><a href = "#" alt = "" title = ""><span>腕表</span></a>
+				<div id = "bag4"><ul></ul><ul id = "ul9"></ul><ul id = "ul10"></ul></div>
+			</li>
+			<li id="bagg5"><a href = "#" alt = "" title = ""><span>配饰</span></a>
+				<div id = "bag5"><ul></ul><ul id = "ul11"></ul><ul id = "ul12"></ul></div>
+			</li>
+			<li id="bagg6"><a href = "#" alt = "" title = ""><span>妆品</span></a>
+				<div id = "bag6"><ul></ul><ul id = "ul13"></ul><ul id = "ul14"></ul></div>
+			</li>
+			<li id="bagg7"><a href = "#" alt = "" title = ""><span>生活</span></a>
+				<div id = "bag7"><ul></ul><ul id = "ul15"></ul><ul id = "ul16"></ul></div>
+			</li>
+			<li id="bagg8"><a href = "#" alt = "" title = ""><span>婴童</span></a>
+				<div id = "bag8"><ul></ul><ul id = "ul17"></ul><ul id = "ul18"></ul></div>
+			</li>
+			<li id="bagg9"><a href = "#" alt = "" title = ""><span>豪车</span></a>
+				<div id = "bag9"><ul></ul><ul id = "ul19"></ul><ul id = "ul20"></ul></div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--************************轮播图**********************-->
+<div id = 'bannerMain'>
+		<div class = 'bannerPlay' id = "playB">
+			<ol>
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<ul>
+				<li><a href="#"><img src="image/find/0913banner.jpg" /></a></li>
+				<li><a href="#"><img src="image/find/0914banner.jpg" /></a></li>
+				<li><a href="#"><img src="image/find/0918banner1.jpg" /></a></li>
+				<li><a href="#"><img src="image/find/0918banner2.jpg" /></a></li>
+				<li><a href="#"><img src="image/find/0920banner.jpg" /></a></li>
+				<li><a href="#"><img src="image/find/0913banner.jpg" /></a></li>
+			</ul>
+		</div>
+</div>
+<!--************************radius**********************-->
+<div id = "Radius">
+	<div id = "ban">
+		<div id = "Radius_img">
+			<a class = "img1" href="#"><img src="image/find/gate_1.jpg"><p class="p1"><img src="image/find/gate_1a.jpg"></p></a>		
+			<a class = "img2" href="#"><img src="image/find/gate_6.jpg"><p class="p2"><img src="image/find/gate_6a.jpg"></p></a>		
+			<a class = "img3" href="#"><img src="image/find/gate_2.jpg"><p class="p3"><img src="image/find/gate_2a.jpg"></p></a>			
+			<a class = "img4" href="#"><img src="image/find/gate_7.jpg"><p class="p4"><img src="image/find/gate_7a.jpg"></p></a>		
+			<a class = "img5" href="#"><img src="image/find/gate_3.jpg"><p class="p5"><img src="image/find/gate_3a.jpg"></p></a>			
+			<a class = "img6" href="#"><img src="image/find/gate_9.jpg"><p class="p6"><img src="image/find/gate_9a.jpg"></p></a>			
+			<a class = "img7" href="#"><img src="image/find/gate_4.jpg"><p class="p7"><img src="image/find/gate_4a.jpg"></p></a>		
+			<a class = "img8" href="#"><img src="image/find/gate_8.jpg"><p class="p8"><img src="image/find/gate_8a.jpg"></p></a>			
+			<a class = "img9" href="#"><img src="image/find/gate_5.jpg"><p class="p9"><img src="image/find/gate_5a.jpg"></p></a>			
+			<a class = "img10" href="#"><img src="image/find/gate_100.jpg"><p class="p10"><img src="image/find/gate_10aa.jpg"></p></a>			
+		</div>
+	</div>
+</div>
+<!--************************瀑布流**********************-->
+<div id = "move_goods">
+	<div id = "wrap">
+		<div class = "move_img"></div>
+	</div>
+</div>
+<div id = "ban">
+	<ul id = "wpbUl">
+		<li class="wpbUl1"></li>
+		<li class="wpbUl2"></li>
+		<li class="wpbUl3"></li>
+	</ul>
+
+</div>
+<div id = "under">
+	<div id = 'ban'>
+		<p></p>
+		<a href=""></a>
+	</div>
+</div>
+<!--***********************footlist**********************-->
+<div id = "footlist">
+	<div id = "wrap">
+		<div class = "footlist_phone"></div>
+		<div class = "footlist_falls">
+			<dl class="footlist_falls1">
+				<dt>新手入门
+					<dd><a href="#">购物流程</a></dd>
+					<dd><a href="#">会员等级与升级</a></dd>
+					<dd><a href="#">我的走秀</a></dd>
+					<dd><a href="#">常见问题</a></dd>
+					<dd><a href="#">手机走秀</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>配送方式
+					<dd><a href="#">海外配送说明</a></dd>
+					<dd><a href="#">配送运费</a></dd>
+					<dd><a href="#">配送查询</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>支付方式
+					<dd><a href="#">在线支付</a></dd>
+					<dd><a href="#">货到付款</a></dd>
+					<dd><a href="#">银行汇款</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>售后服务
+					<dd><a href="#">退换货自助申请</a></dd>
+					<dd><a href="#">退换货政策</a></dd>
+					<dd><a href="#">退换货流程</a></dd>
+					<dd><a href="#">退款说明</a></dd>
+					<dd><a href="#">CEO邮箱</a></dd>
+				</dt>
+			</dl>
+			<dl id="footlist_falls2">
+				<dt>走秀微信客服
+					<dd></dd>
+				</dt>
+			</dl>
+		</div>
+	</div>
+</div>
+<!--***********************footlist2**********************-->
+<div id = 'footlist2'>
+	<ul>
+		<li><a href="#">关于走秀</a>|</li>
+		<li><a href="#">About us</a>|</li>
+		<li><a href="#">媒体报道</a>|</li>
+		<li><a href="#">品牌招商</a>|</li>
+		<li><a href="#">加入走秀</a>|</li>
+		<li><a href="#">网站地图</a>|</li>
+		<li><a href="#">联系我们</a>|</li>
+		<li><a href="#">品牌大全</a>|</li>
+		<li><a href="#">邮件订阅</a>|</li>
+		<li><a href="#">品牌专题</a>|</li>
+		<li><a href="#">WAP站点</a>|</li>
+	</ul>
+</div>
+<!--***********************footlist3**********************-->
+<div id = 'footlist3'>
+	<img src="image/foot_icons.jpg"/>
+</div>
+<!--***********************footlist4**********************-->
+<div id = 'footlist4'>
+	<p>Copyright@<script type="text/javascript">
+		document.write(new Date().getFullYear());
+	</script>20160919 Xiu.com深圳走秀网络科技有限公司 版权所有. 粤ICP备07502993号</p>
+</div>
+<!--***********************footlist5**********************-->
+<div id = 'footlist5'>
+	<div id = "footlist5_img">
+		<a href="#"><img src="image/c_01.jpg" /></a>
+		<a href="#"><img src="image/c_02.jpg" /></a>
+		<a href="#"><img src="image/c_03.jpg" /></a>
+		<a href="#"><img src="image/c_04.jpg" /></a>
+		<a href="#"><img src="image/c_05.jpg" /></a>
+		<a href="#"><img src="image/c_06.jpg" /></a>
+		<a href="#"><img src="image/c_08.jpg" /></a>
+		<a href="#"><img src="image/c_09.jpg" /></a>
+		<a href="#"><img src="image/c_10.jpg" /></a>
+	</div>
+	
+</div>
+</body>
+</html>

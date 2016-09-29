@@ -1,0 +1,25 @@
+function getCommentTotalNum(params){
+	$.ajax({
+		type : "GET",
+		url : "http://comm.xiu.com/commentlist/comment_total_num/?format=jsonp&callback=?",
+		data :params,
+		dataType : "jsonp",
+		async:false,
+		success : function(dataJson) {
+			 var ctn = dataJson.data;
+			 if(ctn>0){
+					$("#toComment").html("已有"+ctn+"人评论");
+				}else{
+					$("#toComment").html("已有0人评论");
+			  }
+			 $("#comment_total_num").html("品牌评论("+ctn+")<i></i>");
+		}
+	});
+}
+var prodId = $("#goodsId").val();
+var brandId = $("#brandId").val();
+var params={
+	prodId:prodId,
+	brandId:brandId
+};
+getCommentTotalNum(params);

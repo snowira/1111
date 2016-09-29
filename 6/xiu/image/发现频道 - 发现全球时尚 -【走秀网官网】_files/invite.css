@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+#InviteWindow{text-align:left;position:absolute;z-index:8889;font-size:12px;top:50px;left:10px;width:288px;height:297px;visibility:hidden;background-color:transparent;background-repeat:no-repeat;}
+#InviteWindow{background-image:url(http://v1.live800.com/live800/chatClient/invite/theme/10/images/invite_bg.png)!important;_background-image:none;}#InviteWindow #invite_bg{display:none!important;_display:block;_position:absolute;_top:0;_lef:0;_width:420px;_height:251px; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test.live800.com/test1/chatClient/invite/theme/10/images/invite_bg.png');}
+#invite_title{height:27px;line-height:27px;color:#315798;cursor:move;top:250px;text-align:center;font-weight:bold;font-size:12px;font-style:italic;position:relative;}
+#invite_text{line-height:14px;padding:4px 4px 0 134px;height:90px;overflow:hidden;margin:-24px 0 0 0;;color:#fff;position:relative;}
+#invite_text p{padding:10px 0 0 0;margin:0;text-indent:24px;}#invite_btn{position:absolute;bottom:100px;width:69px;left:164px;}
+#invite_btn button{width:100%;height:39px;line-height:39px;font-size:12px;font-weight:bold;text-align:center;border:none;cursor:pointer;}
+#invite_btn .accept{background:url(http://v1.live800.com/live800/chatClient/invite/theme/10/images/invite_bt1.gif) no-repeat -1px 0;color:#000;_position:relative;}
+#invite_btn .cancel{background:url(http://v1.live800.com/live800/chatClient/invite/theme/10/images/invite_bt2.gif) no-repeat -1px -1px;color:#fff;_position:relative;}
+#previewTr #InviteWindow{position:relative;visibility:visible;top:0;left:0;}
+#previewTr #pre_invite_title{height:27px;line-height:27px;color:#315798;margin:250px 0 0 0;text-align:center;font-weight:bolder;font-size:12px;cursor:default;}
+div.hidden *{display:none;}

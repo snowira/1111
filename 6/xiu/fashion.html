@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/xiu.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/lady.css"/>
+	<link rel="stylesheet" type="text/css" href="css/fashion.css"/>
+	<link rel="stylesheet" type="text/css" href="css/find.css"/>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/xiu.js"></script>
+	<script type="text/javascript" src="js/tabSwitch.js"></script>
+	<script type="text/javascript" src="js/xiuindex.js"></script>
+	<script type="text/javascript" src="js/perfect_startMove.js"></script>
+	<script type="text/javascript" src="tool.js"></script>
+	<script src="jquery.cookie.js"></script>
+	<script type="text/javascript">
+		$(function(){	
+		if($.cookie("goods") == null){
+			$("#num").html("0")
+			$(".topLink_span").html("0")
+		}else{
+			$("#num").html($.cookie("goods"))
+			$(".topLink_span").html($.cookie("goods"))
+			//$("#topLink_goods").html("");
+			var timg = $("<div id = 'ttimg'><img src = 'image/g1_50_50.jpg'></div><div id = 'ttimgr'><p>Kenzo</p><p>女士纯棉小虎头衬衫 颜色：蓝色</p><p>￥2200</p><p>购物袋中共有<span>"+$.cookie("goods")+"</span>件商品</p></div>");
+				$("#topLink_goods").html(timg);
+		}
+
+			ajax("get","fashion.json","",function(data){
+				var arr = JSON.parse(data);
+				for(var i = 0;i < arr.length;i++){
+					var ar = $("<img src="+ arr[i].img +">");
+					var aa = $("<a></a>");
+					var dd = $("<dd></dd>");
+					aa.append(ar);
+					dd.append(aa);
+					$("#smallpic dl").append(dd);
+							$("#smallpic").find("dd").click(function(){
+							/*$("#smallpic").find("img").attr("class","");
+							$(this).attr("class","ssimg");*/
+							$(".mTopleft p").css("display","none");
+							$(".mTopleft p").eq($(this).index()).css("display","block");
+						});
+
+				}	
+
+				
+			});
+			if($.cookie("goods") == null){
+				var iNow = 0;
+			}else{
+				iNow = $.cookie("goods")
+			}
+
+			$(".mbuy2").click(function(){
+				iNow++;
+				$("#num").html(iNow);
+				$(".topLink_span").html(iNow);
+				$.cookie("goods",iNow,{expires:50});
+				var timg = $("<div id = 'ttimg'><img src = 'image/g1_50_50.jpg'></div><div id = 'ttimgr'><p>Kenzo</p><p>女士纯棉小虎头衬衫 颜色：蓝色</p><p>￥2200</p><p>购物袋中共有<span>"+iNow+"</span>件商品</p></div>");
+				$("#topLink_goods").html(timg);
+			});
+			
+		});
+	</script>
+</head>
+<body style="height: 3000px;">
+		<!--************************top**********************-->
+	<div class = "xiuhead">
+		<div id = "wrap">
+			<div class = "topMain">
+				<div class = "login fl">
+					<ul class = "topLink ">
+						<li class = "topLink_login"><a href = "#1" alt = "" title = "">登录/注册</a></li>
+
+						<li id = "topLink_car"><a class = "xiuCar" href = "car.html" alt = "" title = "">购物袋<span class = "topLink_span">0</span>件</a>
+						<div id = "topLink_goods"><span>购物袋暂时没有商品!</span></div>
+						</li>
+						
+						<li id = "topLink_xiu"><a class = "xiu" href = "#3" alt = "" title = "">我的走秀</a>
+						<div id = "xiu_xiu" style="background-color: #fff;"><a href="#">我的订单</a><a href="#">自助退货</a><a href="#">我的收藏</a><a href="#">帮助中心</a><a href="#">全部吐槽</a></div>
+						</li>
+					</ul>
+				</div>
+				<div class = "topMain_img fl"></div>
+			<div class = "topMain_search fr">
+				<input class = "search_text" type = "text" placeholder = "请搜索Stan smith试试" />
+				<input type = "button" class = "search_btn"/>
+			</div>
+			<div class = "nav fl">
+				<ul>
+					<li><a class = "firstPage" href = "index.html" alt = "" title = "">首页</a></li>
+					<li><a href = "#" alt = "" title = "">新品</a></li>
+					<li><a href = "#" alt = "" title = "">男士</a></li>
+					<li><a href = "lady.html" alt = "" title = "">女士</a></li>
+					<li><a href = "#" alt = "" title = "">品牌</a></li>
+					<li><a class = "find" href = "find.html" alt = "" title = "">发现</a></li>
+					<li><a href = "#" alt = "" title = "">专题</a></li>
+					<li><a href = "#" alt = "" title = "">手机走秀</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+<!--************************nav**********************-->
+<div id = "listNn">
+	<div id = "wrap">
+		<ul>
+			<li id="bagg1"><a class = "pag" href = "#" alt = "" title = ""><span>包袋</span></a>
+				<div id = "bag1"><ul id = "ul1"></ul><ul id = "ul2"></ul><ul id = "ul3"></ul></div>
+			</li>
+			<li id="bagg2"><a href = "#" alt = "" title = ""><span>服装</span></a>
+				<div id = "bag2"><ul id = "ul4"></ul><ul id = "ul5"></ul><ul id = "ul6"></ul></div>
+			</li>
+			<li id="bagg3"><a href = "#" alt = "" title = ""><span>鞋靴</span></a>
+				<div id = "bag3"><ul></ul><ul id = "ul7"></ul><ul id = "ul8"></ul></div>
+			</li>
+			<li id="bagg4"><a href = "#" alt = "" title = ""><span>腕表</span></a>
+				<div id = "bag4"><ul></ul><ul id = "ul9"></ul><ul id = "ul10"></ul></div>
+			</li>
+			<li id="bagg5"><a href = "#" alt = "" title = ""><span>配饰</span></a>
+				<div id = "bag5"><ul></ul><ul id = "ul11"></ul><ul id = "ul12"></ul></div>
+			</li>
+			<li id="bagg6"><a href = "#" alt = "" title = ""><span>妆品</span></a>
+				<div id = "bag6"><ul></ul><ul id = "ul13"></ul><ul id = "ul14"></ul></div>
+			</li>
+			<li id="bagg7"><a href = "#" alt = "" title = ""><span>生活</span></a>
+				<div id = "bag7"><ul></ul><ul id = "ul15"></ul><ul id = "ul16"></ul></div>
+			</li>
+			<li id="bagg8"><a href = "#" alt = "" title = ""><span>婴童</span></a>
+				<div id = "bag8"><ul></ul><ul id = "ul17"></ul><ul id = "ul18"></ul></div>
+			</li>
+			<li id="bagg9"><a href = "#" alt = "" title = ""><span>豪车</span></a>
+				<div id = "bag9"><ul></ul><ul id = "ul19"></ul><ul id = "ul20"></ul></div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--************************mtop**********************-->
+<div id = "backTop">
+	<span>关闭</span>
+	<div id = "backTop0">
+		<a class = "backTop1" href="#"></a>
+		<a class = "backTop2" href="#"><span id = "num">0</span></a>
+		<a class = "backTop3" href="#"></a>
+		<a class = "backTop4" href="#"></a>
+	</div>
+</div>
+<div id = "mTop">
+	<div id = "wwp">
+		<div class="wwptop">
+			您的位置:<span><a href="#">走秀首页</a><<a href="#">女装</a><<a href="#">上装</a><<a href="#">衬衫</a><女士纯棉小虎头衬衫</span>
+		</div>
+	</div>
+</div>
+<!--************************mtop1**********************-->
+<div id = "mTopimg">
+	<div id = "wwp">
+		<div class="mTopm">
+			<div class="mTopleft">
+				<p style="display: block;"><img src="image/fashion/g1_402_536.jpg"/></p>
+				<p><img src="image/fashion/g2_402_536.jpg"/></p>
+				<p><img src="image/fashion/g3_402_536.jpg"/></p>
+				<div id = "position_box"></div>
+				<div id = "b_box">
+					<div id = "box_all">
+						<img src="image/fashion/g1_900_1200.jpg">
+					</div>
+				</div>
+			</div>
+
+			<div class="mTopright">
+				<h3>女士纯棉小虎头衬衫</h3>
+				<div class ="mTopsign">
+					<span>品&nbsp;&nbsp;牌:</span>
+					<a class = "mTopa0" href="#">Kenzo</a>
+					<a class = "mTopa" href="#">(高田贤三)</a>
+					<a class = "mTopa1" href="#">已有1702人评论</a>
+					<span class="mTopspan">商品编号:11654635</span>
+				</div>
+				<div class="mprice">
+					<p class="mp1">走秀价:<span>2200</span></p>
+					<p class="mp2">市场参考价:<span>￥3100</span></p>
+					<p class="mp3">发货地:<span class="mp3span">爱尔兰.都柏林</span><span class="mp3span1">预计9-18送达<a href="#">查看配送流程</a></span></p>
+					<p class="mp4">税&nbsp;费:<span>由海外卖家承担</span><a href="#">详细说明</a></p>
+				</div>
+				<div class="mcolor">
+					<div class="md1"><span>颜&nbsp;色:</span><ul><li><a href="#">蓝色</a></li></ul></div>
+					<div class="md2"><span>尺&nbsp;码:</span><a href="#">FR34</a><a href="#">FR36</a><a href="#">FR38</a><a href="#">FR40</a><a href="#">FR42</a><a href="#">FR44</a><a  class = "alast"href="#">尺码指南</a></div>
+					<div class="md3"><span>数&nbsp;量:</span><span class="md33">-</span><a href="#">1</a><span class="md33">+</span><span>件</span></div>
+					<div class="mgood"><span class="s1">支持分期付款</span><span class="s2">由House of Elliot发货</span><span class="s3">由走秀网提供售后服务</span></div>
+					<div class="mbuy">
+						<a class="mbuy1" href="#"></a>
+						<a class="mbuy2" href="#"></a>
+						<a class="mbuy3" href="#"></a>
+					</div>
+					<div class="mphone">
+						<span>电话订购：<span class="mphone1">400-888-4499</span></span>
+						<span class="mphone2">(8:00-24:00)</span>
+					</div>
+				</div>
+
+			</div>
+			<div id = "smallpic">
+				<dl>
+					<!-- <dd><a class = "dd1" href="#"><img src="image/fashion/g1_66_88.jpg"></a></dd>
+					<dd><a class = "dd2" href="#"><img src="image/fashion/g2_66_88.jpg"></a></dd>
+					<dd><a class = "dd3" href="#"><img src="image/fashion/g3_66_88.jpg"></a></dd> -->
+				</dl>		
+			</div>
+			<div id = "picsign">
+				<div class="picsign1"><div>扫一扫二维码</br>分享给朋友</div></div>
+				<div class="picsign2"><span class="picpp">分享到</span><span class="picpan"></span></div>
+			</div>
+		</div>	
+	</div>
+</div>
+<!--************************button**********************-->
+<div id = "btn_nav">
+	<div id = "wwp">
+		<div class="w1">
+			<ul>
+				<li><a href="#">商品信息</a></li>
+				<li><a href="#">品牌评论(1703)</a></li>
+				<li><a href="#">走秀承诺</a></li>
+				<li><a href="#">服务保障</a></li>
+			</ul>
+		</div>
+		<div class="w2">
+			<span>2200</span>
+			<a href="#"></a>
+		</div>
+			
+	</div>
+</div>
+<!--************************left**********************-->
+<div id = "sizegood">
+	<div id = "wwp">
+		<div class="sizemain">
+			<div id = "sizeLeft">
+			<div class="goodm"><span>商品信息</span></div>
+			<table border="0px solid #ebebeb" width="774" height="156" cellspacing="0" padding ="0" cellpadding="0">
+				<tr>
+					<td>袖长：<span>长袖</span></td>
+					<td>服装款式：<span>衬衫</span></td>
+					<td>服装门襟：<span>暗扣</span></td>
+				</tr>
+				<tr>
+					<td>衣长：<span>标准</span></td>
+					<td>领型：<span>衬衫领</span></td>
+					<td>年份季节：<span>2016秋冬</span></td>
+				</tr>
+				<tr>
+					<td>面料材质：<span>100%棉</span></td>
+					<td>适合性别：<span>女性</span></td>
+					<td>服装风格：<span>休闲</span></td>
+				</tr>
+				<tr>
+					<td>季节<span>春秋</span></td>
+					<td>服装流行元素：<span>纯色</span></td>
+					<td>货到付款：<span>不支持</span></td>
+				</tr>
+				<tr>
+					<td colspan="3">注意事项：<span>请根据服装洗涤标志选择正确的养护方法</span></td>
+				</tr>
+			</table>
+			<div class="goodm"><span>尺码对照</span></div>
+			<div class="goodimg">
+				<img src="image/fashion/sizeImage_4985.jpg">
+				<img src="image/fashion/ys.jpg">
+				<img src="image/fashion/wx.jpg">
+				<div class="goodm"><span>商品对照</span></div>
+				<img src="image/fashion/e0.jpg">
+				<img src="image/fashion/e1.jpg">
+				<img src="image/fashion/e2.jpg">
+				<div class="goodm"><span>品牌故事</span></div>
+				<img src="image/fashion/3179_2_11464227114275.jpg">
+			</div>
+		</div>
+		<div id = "sizeRight">
+			<div class ="sizeR1">你最近浏览的商品</div>
+			<div class="sizeR2"><a href=""><img src="image/fashion/g1_81_108 (1).jpg"/></a></div>
+			<div class="sizeR3">
+				<p>Burberry</p>
+				<p>女士翻领长袖衬衫</p>
+			</div>
+			<div class="sizeR4"><a href="sizeR4"><img src="image/fashion/g1_81_108.jpg"/></a></div>
+			<div class="sizeR3">
+				<p>Burberry</p>
+				<p>女士翻领长袖衬衫</p>
+			</div>
+		</div>
+		</div>
+	</div>	
+</div>
+<!--***********************footlist**********************-->
+<div id = "footlist">
+	<div id = "wrap">
+		<div class = "footlist_phone"></div>
+		<div class = "footlist_falls">
+			<dl class="footlist_falls1">
+				<dt>新手入门
+					<dd><a href="#">购物流程</a></dd>
+					<dd><a href="#">会员等级与升级</a></dd>
+					<dd><a href="#">我的走秀</a></dd>
+					<dd><a href="#">常见问题</a></dd>
+					<dd><a href="#">手机走秀</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>配送方式
+					<dd><a href="#">海外配送说明</a></dd>
+					<dd><a href="#">配送运费</a></dd>
+					<dd><a href="#">配送查询</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>支付方式
+					<dd><a href="#">在线支付</a></dd>
+					<dd><a href="#">货到付款</a></dd>
+					<dd><a href="#">银行汇款</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>售后服务
+					<dd><a href="#">退换货自助申请</a></dd>
+					<dd><a href="#">退换货政策</a></dd>
+					<dd><a href="#">退换货流程</a></dd>
+					<dd><a href="#">退款说明</a></dd>
+					<dd><a href="#">CEO邮箱</a></dd>
+				</dt>
+			</dl>
+			<dl id="footlist_falls2">
+				<dt>走秀微信客服
+					<dd></dd>
+				</dt>
+			</dl>
+		</div>
+	</div>
+</div>
+<!--***********************footlist2**********************-->
+<div id = 'footlist2'>
+	<ul>
+		<li><a href="#">关于走秀</a>|</li>
+		<li><a href="#">About us</a>|</li>
+		<li><a href="#">媒体报道</a>|</li>
+		<li><a href="#">品牌招商</a>|</li>
+		<li><a href="#">加入走秀</a>|</li>
+		<li><a href="#">网站地图</a>|</li>
+		<li><a href="#">联系我们</a>|</li>
+		<li><a href="#">品牌大全</a>|</li>
+		<li><a href="#">邮件订阅</a>|</li>
+		<li><a href="#">品牌专题</a>|</li>
+		<li><a href="#">WAP站点</a>|</li>
+	</ul>
+</div>
+<!--***********************footlist3**********************-->
+<div id = 'footlist3'>
+	<img src="image/foot_icons.jpg"/>
+</div>
+<!--***********************footlist4**********************-->
+<div id = 'footlist4'>
+	<p>Copyright@<script type="text/javascript">
+		document.write(new Date().getFullYear());
+	</script>20160919 Xiu.com深圳走秀网络科技有限公司 版权所有. 粤ICP备07502993号</p>
+</div>
+<!--***********************footlist5**********************-->
+<div id = 'footlist5'>
+	<div id = "footlist5_img">
+		<a href="#"><img src="image/c_01.jpg" /></a>
+		<a href="#"><img src="image/c_02.jpg" /></a>
+		<a href="#"><img src="image/c_03.jpg" /></a>
+		<a href="#"><img src="image/c_04.jpg" /></a>
+		<a href="#"><img src="image/c_05.jpg" /></a>
+		<a href="#"><img src="image/c_06.jpg" /></a>
+		<a href="#"><img src="image/c_08.jpg" /></a>
+		<a href="#"><img src="image/c_09.jpg" /></a>
+		<a href="#"><img src="image/c_10.jpg" /></a>
+	</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* 客服信息 */
+.service_info{width:100%;background:#000;height:160px;color:#fff;padding-top:20px;min-width: 1200px;clear:both;}
+.service_info a{color:#cdcdcd;}
+.service_info a:hover{color:#fff;}
+.service_info .service_nr{width:1200px;}
+.service_info .cs,.service_info dl,.service_info dl *{float:left;}
+.service_info dl{width:103px;padding:8px 10px 0 0;}
+.service_info dl dt{width:100%;font-size:14px;margin-bottom:10px;font-weight:bold;}
+.service_info dl dd{width:100%;line-height:20px;height:20px;overflow:hidden;}
+
+/* footer - 页面页脚 */
+.footer{ margin:20px auto 0;padding-bottom:20px;width:100%;margin:0 auto;}
+.footer .footlink,.footlink .fLink_con,.fLink_con ul{ height:32px; line-height:32px; clear:both; min-width: 1000px; }
+.fLink_con ul{ text-align:center;}
+.fLink_con li{ display:inline; text-align:center;color:#ccc; }
+.fLink_con li a{ margin:0 8px 0 6px; color:#000; }
+.fLink_con li a:hover{color:#feb300;}
+.server_btn{ width:1000px;height:70px;margin:30px auto 15px auto;}
+.server_btn a{display:block;float:left;width:56px;height:70px;background:url(/static/css/default/img/comm/footer_sprite.gif) no-repeat;margin:0 43px 0 42px;display:inline;}
+.server_btn a.btn1{background-position:0 0;}
+.server_btn a.btn2{background-position:-56px 0;}
+.server_btn a.btn3{background-position:-112px 0;}
+.server_btn a.btn4{background-position:-168px 0;}
+.server_btn a.btn5{background-position:-224px 0;}
+.server_btn a.btn6{width:70px;background-position:-280px 0;}
+.server_btn a.btn7{background-position:-350px 0;margin-right:0;}
+.cindex_info{background:#ebebeb;border-top:#9a9a9a 3px solid;margin:0 0 15px 0;height:160px;}
+.cindex_info a{color:#252525;}
+.cindex_info a:hover{color:#ec7614;}
+.cindex_info dl dt{color:#252525;}
+.cindex_info dl{padding:8px 60px 0 0;width:130px;}
+.cindex_info .cs{height:125px;margin:10px 100px 0 0;display:inline;width:183px;}
+.cindex_info dl.wchat{float:right;width:95px;padding-right:0;}
+.cindex_info dl.wchat dd{background:url(/static/css/default/img/comm/footer_sprite.gif) no-repeat -189px -87px;width:85px;height:85px;margin-left:2px;}
+.copyright{height:20px; line-height:20px; text-align:center;color:#999;font-family:Tahoma, Geneva, sans-serif, '宋体';clear:both;min-width: 1000px;}
+.copyright a{margin:0 3px;color:#999;font-weight:bold;}
+.copyright a:hover{color:#feb300;}
+.kf{background:url(/static/css/default/img/comm/footer_sprite.gif) no-repeat left -86px; display:inline-block; width:183px; height:35px;}
+.p_num{background:url(/static/css/default/img/comm/footer_sprite.gif) no-repeat left -122px; width:183px; height:45px;}
+.mail_link{background:url(/static/css/default/img/comm/footer_sprite.gif) no-repeat left -167px; display:inline-block; width:183px; height:35px;}
+
+/*2014-06-19 add new css(foot)*/
+.pb20{ padding-bottom:20px;}
+.new_server_btn{ width:1000px;height:70px;margin:40px auto 40px auto;}
+.new_server_btn a{ background:url(../../img/promotion/tits.jpg) no-repeat;display:block;float:left;width:225px;height:67px;margin:0 40px 0 65px;display:inline;}
+.new_server_btn a.nb1{ background-position: left -787px;}
+.new_server_btn a.nb2{ background-position: left -860px;}
+.new_server_btn a.nb3{ background-position: left -933px;}
+
+.foot_btn{ width:630px; height:50px; padding:10px 0px; margin:0 auto;}
+.foot_btn a{background:url(/static/css/default/img/comm/foot_icons.jpg) no-repeat;width:145px; height:44px; margin-left:47px; display:inline-block; float:left;}
+.foot_btn a.fa1{ background-position: 0 0; }
+.foot_btn a.fa2{ background-position: -192px 0; }
+.foot_btn a.fa3{ background-position: -385px 0; }
+.des_div{ height:100%; overflow:hidden; padding:10px 0px;width: 1000px; margin: 0 auto;text-align:center;}
+.des_div a img {margin: 0px 0px 0px 12px;display: inline-block;}
+
+/*点击footer‘品牌专题’弹出层*/
+.link-zt {position: relative;}
+.link-zt:hover .pinlei-popout-con{display: block;}
+.link-zt .pinlei-popout {text-align: left;}
+.link-zt .pinlei-popout a {margin: 0;}
+.pinlei-popout-con {display: none;position: absolute;right: -60px;top: -71px;padding-bottom: 9px;}
+.pinlei-popout {width: 385px;padding: 8px 10px 8px 15px;line-height: 22px;color: #363535;background: #fff7ee;border: 1px solid #f5c04c;}
+.pinlei-popout .jts-down {background: url(img/jts-down.jpg) no-repeat;position: absolute;left: 303px;bottom: 1px;display: inline-block;width: 16px;height: 9px;}

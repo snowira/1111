@@ -1,0 +1,157 @@
+@charset "utf-8";
+#wwp{width: 1000px;margin:0 auto;}
+#mTop #wwp{height: 41px;border-bottom: 1px solid #e5e5e5;padding-left: 12px;margin-bottom: 16px;width: 988px;}
+#mTop #wwp .wwptop{font-size: 12px;color: #646464;line-height: 48px;height: 41px;}
+#mTop #wwp .wwptop a{color:#005ba1;}
+#mTopimg .mTopm{height: 647px;}
+#mTopimg .mTopleft{width: 402px;height: 536px;border: 1px solid #ccc;float: left;margin-right: 26px;position: relative;}
+#mTopimg .mTopleft p{height: 536px;display: none;float: left;}
+#mTopimg .mTopleft #position_box{width: 200px;height: 200px;background: #fff;opacity: 0.6;position: absolute;left:0;top:0;z-index: 1;display: none;}
+#mTopimg #b_box{width: 402px;height: 536px;position: absolute;left: 416px;border: 1px solid #ccc;overflow: hidden;display: none;}
+#mTopimg #b_box #box_all{width: 900px;height: 1200px;position: absolute;left: 0;}
+
+
+
+
+
+#mTopimg .mTopright{width: 570px;height: 538px;float: right;}
+#mTopimg .mTopright h3{font-size: 14px;height: 26px;line-height: 26px;}
+#mTopimg .mTopright .mTopsign{height:37px;border-bottom: 1px solid #e5e5e5;color: #646464;line-height: 40px;font-size: 12px;width: 560px;}
+#mTopimg .mTopright .mTopsign a{color: #646464;}
+#mTopimg .mTopright .mTopsign .mTopa1{color: #005ba1;text-decoration: underline;}
+#mTopimg .mTopright .mTopsign .mTopa0{text-decoration: underline;}
+#mTopimg .mTopright .mTopsign .mTopspan{float: right;}
+
+#mTopimg .mTopright .mprice{height: 120px;width: 546px;border-bottom: 1px solid #e5e5e5;padding:21px 0 19px;}
+#mTopimg .mTopright .mprice p{line-height: 30px;font-size: 12px;color: #666; }
+#mTopimg .mTopright .mprice .mp1 span{font-size: 19px;color: #cf1700;line-height: 30px;margin-left: 25px;font-weight: bold;background: url(../image/fashion/goods_info.gif) no-repeat 0 -97px;width: 70px;display: inline-block;text-indent: 16px;}
+#mTopimg .mTopright .mprice .mp3 span{font-size: 14px;color: #ed7514;}
+#mTopimg .mTopright .mprice .mp3span{margin-right: 30px;}
+#mTopimg .mTopright .mprice .mp3 .mp3span1{font-size: 12px;}
+#mTopimg .mTopright .mprice .mp3 .mp3span1 a{margin-left: 10px;text-decoration: underline;color: #005ba1;}
+#mTopimg .mTopright .mprice .mp4 span{margin-left:10px; margin-right: 10px;}
+#mTopimg .mTopright .mprice .mp4 a{text-decoration: underline;color: #005ba1;}
+#mTopimg .mTopright .mcolor{height: 280px;border-bottom: 1px solid #e5e5e5;padding-top: 17px;}
+#mTopimg .mTopright .mcolor span{color: #646464;font-size: 12px;margin-right: 9px;}
+#mTopimg .mTopright .mcolor ul{display: inline-block;}
+#mTopimg .mTopright .mcolor a{color: #646464;padding:6px 7px;width: auto;border: 1px solid #ccc;font-size: 12px;margin-right: 9px;}
+#mTopimg .mTopright .mcolor a:hover{border: 1px solid #ff6701;}
+#mTopimg .mTopright .mcolor .md1{height: 26px;line-height: 26px;margin-bottom: 20px;}
+#mTopimg .mTopright .mcolor .md1 a{height: 20px;line-height: 20px;border:2px solid #ff6701;font-size: 12px;background: url(../image/fashion/goods_info.gif) no-repeat right -52px;padding: 6px 7px 4px 7px;}
+#mTopimg .mTopright .mcolor .md2{height: 26px;margin-bottom: 20px;}
+#mTopimg .mTopright .mcolor .md3 a{width: 40px;display: inline-block;padding: 1px 0;text-align: center;}
+#mTopimg .mTopright .mcolor .md3 .md33{width: 13px;height: 13px;border:1px solid #ccc;display: inline-block;text-align: center;}
+#mTopimg .mTopright .mcolor .md3 {margin-bottom: 15px;}
+#mTopimg .mTopright .mgood .s1{background: url(../image/fashion/fqb.gif) no-repeat;}
+#mTopimg .mTopright .mgood .s2{background: url(../image/fashion/fwb.jpg) no-repeat;}
+#mTopimg .mTopright .mgood .s3{background: url(../image/fashion/wlb.jpg) no-repeat;}
+#mTopimg .mTopright .mgood span{color: #000;padding:0 10px 0 20px;display: inline-block;height: 18px;}
+
+#mTopimg .mTopright .mphone span{font-size: 14px;color: #ff6701;}
+#mTopimg .mTopright .mphone .mphone1{font-weight: bold;}
+#mTopimg .mTopright .mphone .mphone2{color: #646464;}
+
+
+#mTopimg .mTopright .mbuy{height: 36px;padding: 21px 0;}
+#mTopimg .mTopright .mbuy a{border:none;display: inline-block;padding: 0;}
+#mTopimg .mTopright .mbuy a:hover{border:none;}
+#mTopimg .mTopright .mbuy .mbuy1{width: 153px;height: 36px;background: url(../image/fashion/goods_info.gif) no-repeat 0 -843px;}
+#mTopimg .mTopright .mbuy .mbuy1:hover{background: url(../image/fashion/goods_info.gif) no-repeat 0 -879px;}
+#mTopimg .mTopright .mbuy .mbuy2{width: 153px;height: 36px;background: url(../image/fashion/goods_info.gif) no-repeat 0 -916px;}
+#mTopimg .mTopright .mbuy .mbuy2:hover{background: url(../image/fashion/goods_info.gif) no-repeat 0 -952px;}
+#mTopimg .mTopright .mbuy .mbuy3{height: 36px;width: 61px;background: url(../image/fashion/goods_info.gif) no-repeat -211px -1435px; }
+#mTopimg .mTopright .mbuy .mbuy3:hover{background: url(../image/fashion/goods_info.gif) no-repeat -211px -1471px; }
+#smallpic{width:405px;height: 99px;margin-top: 8px;float: left;}
+#smallpic dd{float: left;margin: 0px 4px 0 4px;display: inline;width: 73px;height: 99px;background: url(../image/fashion/goods_info.gif) no-repeat -200px -333px;overflow: hidden;position: relative;}
+#smallpic dd:hover{background: url(../image/fashion/goods_info.gif) no-repeat left -187px;}
+#smallpic dd a{display: block;width: 66px;height: 88px;margin: 6px 0 0 3px;}
+
+
+
+
+
+
+
+#picsign{float: right;width: 570px;height: 90px;}
+#picsign .picsign1{float: left;width: 220px;border-right: 1px solid #ccc;height: 90px;background: url(../image/fashion/45750401.jpg) no-repeat left top;}
+#picsign .picsign1 div{float: right;margin-top: 34px;font-size: 12px;color: #707070;margin-right: 20px;}
+#picsign .picsign2{padding-left: 50px;float: right;width:299px; height:90px;line-height: 90px;font-size: 12px;color: #707070;}
+#picsign .picsign2 span{display: inline-block;}
+#picsign .picsign2 .picpan{width: 244px;height: 24px;background: url(../image/fashion/goods_info.gif) no-repeat -13px -27px;display: block;float: right;margin-top: 33px;}
+#picsign .picsign2 .picpp{float: left;}
+
+/*-------------------------------nav---------------------------------*/
+#btn_nav{margin-top: 30px;overflow: hidden;}
+#btn_nav #wwp{height: 36px;border-bottom: 2px solid #ed741d;background-color: #efefef;overflow: hidden;}
+#btn_nav #wwp .w1 ul{width: 700px;height: 36px;float: left;}
+#btn_nav #wwp .w1 ul li{float: left;width: 140px;line-height: 36px;text-align: center;border-right: 1px solid #fff;}
+#btn_nav #wwp .w1 ul li:hover{background-color: #ed741d;}
+#btn_nav #wwp .w1 ul li a{color: #000;}
+#btn_nav #wwp .w1 ul li a:hover{color: #fff};
+#btn_nav #wwp .w1{width: 700px;height: 36px;float: left;}
+
+#btn_nav #wwp .w2{width: 144px;height: 36px;float: right;padding-right: 17px;line-height: 36px;color: #cc1700;}
+#btn_nav #wwp .w2 span{font-size: 14px;background: url(../image/fashion/goods_info.gif) no-repeat 0 -69px;text-indent: 10px;height: 14px;height: 36px;float: left;line-height: 37px;margin-right: 6px;}
+#btn_nav #wwp .w2 a{display: inline-block;width: 98px;height: 26px;background: url(../image/fashion/goods_info.gif) no-repeat 0 -1440px;margin-top: 6px;}
+
+#sizegood{overflow: hidden;}
+#sizegood #sizeLeft{width: 774px;float: left;}
+#sizegood #sizeLeft .goodm{height: 25px;line-height: 25px;font-size: 14px;padding-left: 16px;width: 758px;background-color: #f3f3f3;color: #333;margin-bottom: 20px;}
+#sizegood #sizeLeft td{font-size: 12px;color: #646464;font-weight: bold;}
+#sizegood #sizeLeft td span{font-weight: normal;}
+#sizegood #sizeLeft table{border-collapse: collapse;border-spacing: 0;empty-cells:hide;margin-bottom: 20px;}
+#sizegood #wwp{margin-top: 25px;}
+#sizegood #sizeRight{width: 208px;border:1px solid #dfdfdf;float: right;}
+#sizegood #sizeRight .sizeR1{height: 26px;background: #f0f0f0;font-size: 12px;line-height: 26px;}
+#sizegood #sizeRight .sizeR2{float: left;}
+#sizegood #sizeRight .sizeR3{float: right;width: 100px;height: 108px;}
+#sizegood #sizeRight .sizeR4{float: left;}
+
+
+
+
+
+
+
+
+#footlist{height: 180px;background-color: #ebebeb;border-top: 3px solid #9a9a9a;}
+#footlist .footlist_phone{background:url(../image/footer_sprite.gif) no-repeat 0 0 ;width: 183px;height: 116px;margin-top: 30px;background-position: 0 -86px;float: left;}
+#footlist .footlist_falls{width: 1017px;height: 148px;float:left;padding-top: 32px;}
+#footlist .footlist_falls dl{float: left;margin-left: 100px;width:90px;}
+#footlist .footlist_falls dl dt{color: #252525;font-size: 12px;margin-bottom: 14px;font-weight: bold;}
+#footlist .footlist_falls dl dd{font-size: 11px;line-height: 20px;}
+#footlist .footlist_falls dl dd a{font-size: 11px;line-height: 20px;color: #252525;}
+#footlist .footlist_falls dl dd a:hover{color: #ec7614;}
+#footlist #footlist_falls2{float: right;}
+#footlist #footlist_falls2 dd{width:85px;height: 85px;background: url(../image/footer_sprite.gif) no-repeat 0 0;background-position: -189px -87px;}
+
+#footlist2{height: 57px;}
+#footlist2 ul{height: 12px;text-align: center;padding:26px 0 19px;}
+#footlist2 ul li{display: inline;text-align: center;font-size: 12px;}
+#footlist2 ul li a{color: #000;margin-right: 4px;}
+#footlist2 ul li a:hover{color: #ec7614;}
+
+#footlist3{height: 44px;}
+#footlist3 img{margin:0 auto;}
+
+#footlist4{height: 46px;overflow: hidden;}
+#footlist4 p{text-align: center;font-size: 12px;color: #999;margin-top: 22px;}
+
+#footlist5{height: 59px;text-align: center;}
+#footlist5 a{text-align: center;display: inline-block;margin-left: 12px;}
+
+#backTop{height: 260px;position: fixed;z-index: 20000;bottom: 180px;width: 69px;right: 47px;display:block;}
+#backTop span{display: block;width: 67px;height: 30px;color: red;;line-height: 30px;text-align: center;font-size: 12px;border: 1px solid #ddd;}
+#backTop a{width: 69px;height: 57px;display: block;}
+#backTop #backTop0{width: 67px;height: 228px;}
+#backTop .backTop1{background: url(../image/fashion/r_menu_bg.jpg) no-repeat 0 0;}
+#backTop .backTop1:hover{background: url(../image/fashion/r_menu_bg.jpg) no-repeat -68px 0;}
+#backTop .backTop2{background: url(../image/fashion/r_menu_bg.jpg) no-repeat 0 -56px;overflow: hidden;}
+#backTop .backTop2:hover{background: url(../image/fashion/r_menu_bg.jpg) no-repeat -68px -56px;}
+#backTop .backTop2 span{background: url(../image/fashion/circle.png) no-repeat 0 0;width: 20px;height: 20px;display: block;margin-top: 4px;margin-left: 38px;color: #fff;line-height: 20px;text-align: center;}
+#backTop .backTop3{background: url(../image/fashion/r_menu_bg.jpg) no-repeat 0 -114px;}
+#backTop .backTop3:hover{background: url(../image/fashion/r_menu_bg.jpg) no-repeat -68px -114px;}
+#backTop .backTop4{background: url(../image/fashion/r_menu_bg.jpg) no-repeat 0 -171px;}
+#backTop .backTop4:hover{background: url(../image/fashion/r_menu_bg.jpg) no-repeat -68px -171px;}
+
+

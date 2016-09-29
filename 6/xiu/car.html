@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/xiu.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/car.css"/>
+	<!-- <script type="text/javascript" src="car.js"></script> -->
+	
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/xiu.js"></script>
+	<script type="text/javascript" src="js/tabSwitch.js"></script>
+	<script type="text/javascript" src="js/xiuindex.js"></script>
+	<script type="text/javascript" src="js/perfect_startMove.js"></script>
+	<script type="text/javascript" src="jquery.cookie.js"></script>
+	<!-- <script type="text/javascript" src="MQuery.js"></script> -->
+	
+<!-- 
+	<script type="text/javascript">
+		$(function(){
+	if($.cookie("goods") == null){
+			var ti = $("<img class = 'drive_img' src='image/car/nogoods.jpg'><h2>购物袋内暂时没有商品,现在就去<a href='index.html'>挑选自己喜欢的商品</a></h2>")
+			$("#drive_Main").html(ti);
+		}else{
+			var timg = $("<div class = 'ttimg'><img src = 'image/g1_50_50.jpg'></div><div class = 'ttimgr'><p>Kenzo</p><p>女士纯棉小虎头衬衫 颜色：蓝色</p><p>￥2200</p><p>购物袋中共有<span>"+$.cookie("goods")+"</span>件商品</p></div>");
+		$("#drive_Main").html(timg);
+		}
+});
+	</script> -->
+</head>
+<body>
+	<div id = "dirve">
+		<a href="index.html"><img src="image/car/s_05.png"></a>
+		<div class="right">
+			<p class="p1">客服热线(免长途费):<span>400-888-4499</span>在线客服</p>
+			<p class="p2">您好!欢迎光临走秀网![登录/注册]|帮助中心</p>
+		</div>
+	</div>
+	<div id = "drive_nav">
+		<ul>
+			<li class="nav1"><span class="nav1_span1"></span>1.我的购物袋</li>
+			<li class="nav2"><span class="nav2_span2"></span>2.填写并核对订单信息</li>
+			<li class="nav3">3.成功提交订单</li>
+		</ul>
+	</div>
+	<div id = "drive_Main">
+		<!-- <img class = "drive_img" src="image/car/nogoods.jpg">
+		<h2>购物袋内暂时没有商品,现在就去<a href="index.html">挑选自己喜欢的商品</a></h2> -->
+		<!-- <div class = "ttimg"><img src="image/g1_50_50.jpg"></div>
+		<div class = "ttimgr">
+				<p>Kenzo</p>
+				<p class="p1">女士纯棉小虎头衬衫 颜色：蓝色</p>
+				<p>￥2200</p>
+				<p>已选商品<span>1</span>件</p>
+		</div> -->
+	</div>
+	<div id = "drive_foot">
+		<p>Copyright@<script type="text/javascript">
+		document.write(new Date().getFullYear());
+		</script>20160919 Xiu.com深圳走秀网络科技有限公司 版权所有. 粤ICP备07502993号</p>
+	</div>
+</body>
+<script type="text/javascript" src="car.js"></script>
+</html>

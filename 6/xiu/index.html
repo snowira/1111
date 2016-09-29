@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/xiu.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/xiu.js"></script>
+	<script type="text/javascript" src="js/tabSwitch.js"></script>
+	<script type="text/javascript" src="js/xiuindex.js"></script>
+	<script type="text/javascript" src="js/perfect_startMove.js"></script>
+	<script src="jquery.cookie.js"></script>
+</head>
+<body>
+<!--************************top**********************-->
+	<div class = "xiuhead" id = "xiutop">
+		<div id = "wrap">
+			<div class = "topMain">
+				<div class = "login fl">
+					<ul class = "topLink ">
+						<li class = "topLink_login"><a href = "#1" alt = "" title = "">登录/注册</a></li>
+
+						<li id = "topLink_car"><a class = "xiuCar" href = "car.html" alt = "" title = "">购物袋<span class = "topLink_span">0</span>件</a>
+						<div id = "topLink_goods"><span>购物袋暂时没有商品!</span>
+							<!-- <div id = "ttimg"><img src="image/g1_50_50.jpg"></div>
+							<div id = "ttimgr">
+								<p>Kenzo</p>
+								<p>女士纯棉小虎头衬衫 颜色：蓝色</p>
+								<p>￥2200</p>
+								<p>购物袋中共有<span>1</span>件商品</p>
+							</div> -->
+						</div>
+						</li>
+						
+						<li id = "topLink_xiu"><a class = "xiu" href = "#3" alt = "" title = "">我的走秀</a>
+						<div id = "xiu_xiu" style="background-color: #fff;"><a href="#">我的订单</a><a href="#">自助退货</a><a href="#">我的收藏</a><a href="#">帮助中心</a><a href="#">全部吐槽</a></div>
+						</li>
+					</ul>
+				</div>
+				<div class = "topMain_img fl"></div>
+			<div class = "topMain_search fr">
+				<input class = "search_text" type = "text" placeholder = "请搜索Stan smith试试" />
+				<input type = "button" class = "search_btn"/>
+			</div>
+			<div class = "nav fl">
+				<ul>
+					<li><a class = "firstPage" href = "index.html" alt = "" title = "">首页</a></li>
+					<li><a href = "#" alt = "" title = "">新品</a></li>
+					<li><a href = "#" alt = "" title = "">男士</a></li>
+					<li><a href = "lady.html" alt = "" title = "">女士</a></li>
+					<li><a href = "#" alt = "" title = "">品牌</a></li>
+					<li><a class = "find" href = "find.html" alt = "" title = "">发现</a></li>
+					<li><a href = "#" alt = "" title = "">专题</a></li>
+					<li><a href = "#" alt = "" title = "">手机走秀</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+<!--************************nav**********************-->
+<div id = "listNav">
+	<div id = "wrap">
+		<ul>
+			<li id="bagg1"><a class = "pag" href = "#" alt = "" title = ""><span>包袋</span></a>
+				<div id = "bag1"><ul id = "ul1"></ul><ul id = "ul2"></ul><ul id = "ul3"></ul></div>
+			</li>
+			<li id="bagg2"><a href = "#" alt = "" title = ""><span>服装</span></a>
+				<div id = "bag2"><ul id = "ul4"></ul><ul id = "ul5"></ul><ul id = "ul6"></ul></div>
+			</li>
+			<li id="bagg3"><a href = "#" alt = "" title = ""><span>鞋靴</span></a>
+				<div id = "bag3"><ul></ul><ul id = "ul7"></ul><ul id = "ul8"></ul></div>
+			</li>
+			<li id="bagg4"><a href = "#" alt = "" title = ""><span>腕表</span></a>
+				<div id = "bag4"><ul></ul><ul id = "ul9"></ul><ul id = "ul10"></ul></div>
+			</li>
+			<li id="bagg5"><a href = "#" alt = "" title = ""><span>配饰</span></a>
+				<div id = "bag5"><ul></ul><ul id = "ul11"></ul><ul id = "ul12"></ul></div>
+			</li>
+			<li id="bagg6"><a href = "#" alt = "" title = ""><span>妆品</span></a>
+				<div id = "bag6"><ul></ul><ul id = "ul13"></ul><ul id = "ul14"></ul></div>
+			</li>
+			<li id="bagg7"><a href = "#" alt = "" title = ""><span>生活</span></a>
+				<div id = "bag7"><ul></ul><ul id = "ul15"></ul><ul id = "ul16"></ul></div>
+			</li>
+			<li id="bagg8"><a href = "#" alt = "" title = ""><span>婴童</span></a>
+				<div id = "bag8"><ul></ul><ul id = "ul17"></ul><ul id = "ul18"></ul></div>
+			</li>
+			<li id="bagg9"><a href = "#" alt = "" title = ""><span>豪车</span></a>
+				<div id = "bag9"><ul></ul><ul id = "ul19"></ul><ul id = "ul20"></ul></div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--************************banner**********************-->
+<div id = "banner">
+	<div id = "wrap">
+		<a href="#" title="" alt=""><img src = "image/0908banner.jpg"/></a>
+	</div>
+	<div class = 'banner_img'>
+		<ul>
+			<li><a href="#1"></a></li>
+			<li><a href="#2"></a></li>
+			<li><a href="#3"></a></li>
+			<li><a href="#4"></a></li>
+			<li><a href="#5"></a></li>
+			<li><a href="#xiutop"></a></li>
+		</ul>
+	</div>
+</div>
+<!--************************move**********************-->
+<div id = "move">
+	<div id = "wrap">
+		<div id = "move_list">
+			<a href="#" class="move_list_1"></a>
+			<a href="#" class="move_list_2"></a>
+			<a href="#" class="move_list_3"></a>
+			<a href="#" class="move_list_4"></a>
+		</div>
+	</div>
+</div>
+<div id = "move_goods">
+	<div id = "wrap">
+		<div class = "move_img"></div>
+	</div>
+</div>
+<div id = "move_goodsimg">
+	<div id = "wrap">
+		<ul>
+			<li><a href="#"><img src="image/0907goods_a1.jpg" /></a></li>
+			<li><a href="#"><img src="image/0822goods_a11.jpg" /></a></li>
+			<li><a href="#"><img src="image/0908goods_a3.jpg" /></a></li>
+			<li><a href="#"><img src="image/0907goods_a4.jpg" /></a></li>
+			<li><a href="#"><img src="image/0908goods_a5.jpg" /></a></li>
+			<li><a href="#"><img src="image/0907goods_a6.jpg" /></a></li>
+		</ul>
+	</div>
+</div>
+<!--************************move2**********************-->
+<div id = "move_goodsimg">
+	<div id = "wrap">
+		<ul>
+			<li><a href="#"><img src="image/0907goods_b1.jpg" /></a></li>
+			<li><a href="#"><img src="image/0908goods_b2.jpg" /></a></li>
+			<li><a href="#"><img src="image/0907goods_b3.jpg" /></a></li>
+			<li><a href="#"><img src="image/0907goods_b4.jpg" /></a></li>
+			<li><a href="#"><img src="image/0909goods_b5.jpg" /></a></li>
+			<li><a href="#"><img src="image/090999goods_b6.jpg" /></a></li>
+		</ul>
+	</div>
+</div>
+<!--************************Lively**********************-->
+<div id = "move_goods">
+	<div id = "wrap">
+		<div class = "move_img2"></div>
+	</div>
+</div>
+<div class = "lively">
+	<div id = "wrap">
+		<ul>
+			<li><a href="#"><img class = "livelyimg1" src="image/0619beats_06.jpg" /><p><img src="image/0708beats_06.png" /></p></a></li>
+			<li><a href="#"><img class = "livelyimg1" src="image/0906beats_01.jpg" /><p><img src="image/0906beats_01.png" /></p></a></li>
+			<li><a href="#"><img class = "livelyimg1" src="image/0906beats_02.jpg" /><p><img src="image/0906beats_02.png" /></p></a></li>
+			<li><a href="#"><img class = "livelyimg1" src="image/0908beats_03.jpg" /><p><img src="image/0908beats_03.png" /></p></a></li>
+			<li><a href="#"><img class = "livelyimg1" src="image/0903beats_04.jpg" /><p><img src="image/0903beats_04.png" /></p></a></li>
+			<li><a href="#"><img class = "livelyimg1" src="image/0906beats_05.jpg" /><p><img src="image/0906beats_05.png" /></p></a></li>
+		</ul>
+	</div>
+</div>
+<!--************************shopping place**********************-->
+<div class= "moreSubject">
+	<div id = "wrap">
+		<a href="#"><img src="image/topic_m.jpg"></a>
+	</div>
+</div>
+<div id = "move_goods">
+	<div id = "wrap">
+		<div class = "move_img3"></div>
+	</div>
+</div>
+<div class="shoppingPlace">
+	<div id="wrap">
+		<ul>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_01.jpg" /><p><img src="image/0908sales_01.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_02.jpg" /><p><img src="image/0908sales_02.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_03.jpg" /><p><img src="image/0908sales_03.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_04.jpg" /><p><img src="image/0908sales_04.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_05.jpg" /><p><img src="image/0908sales_05.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_06.jpg" /><p><img src="image/0908sales_06.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_07.jpg" /><p><img src="image/0908sales_07.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_08.jpg" /><p><img src="image/0908sales_08.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_09.jpg" /><p><img src="image/0908sales_09.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_10.jpg" /><p><img src="image/0908sales_10.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_11.jpg" /><p><img src="image/0908sales_11.png" /></p></a></li>
+			<li><a href="#"><img class = "shoppingimg" src="image/0908sales_12.jpg" /><p><img src="image/0908sales_12.png" /></p></a></li>
+		</ul>
+	</div>
+</div>
+<div class= "moreSubject2">
+	<div id = "wrap">
+		<a href = "#"><img src="image/beat_m.jpg"></a>
+	</div>
+</div>
+<!--************************car**********************-->
+<div id="carr">
+	<div id ="wrap">
+		<a href="#"><img src="image/0830auto.jpg"></a>
+	</div>
+</div>
+<div id = "move_goods">
+	<div id = "wrap">
+		<div class = "move_img4"></div>
+	</div>
+</div>
+<!--************************瀑布流**********************-->
+<div id = "falls">
+	<div id = "wrap">
+		<div id = "fallsimg">
+			
+		</div>
+	</div>
+</div>
+<div class= "moreSubject3">
+	<div id = "wrap">
+		<a href = "#"><img src="image/beat_m.jpg"></a>
+	</div>
+</div>
+<!--***********************footlist**********************-->
+<div id = "footlist">
+	<div id = "wrap">
+		<div class = "footlist_phone"></div>
+		<div class = "footlist_falls">
+			<dl class="footlist_falls1">
+				<dt>新手入门
+					<dd><a href="#">购物流程</a></dd>
+					<dd><a href="#">会员等级与升级</a></dd>
+					<dd><a href="#">我的走秀</a></dd>
+					<dd><a href="#">常见问题</a></dd>
+					<dd><a href="#">手机走秀</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>配送方式
+					<dd><a href="#">海外配送说明</a></dd>
+					<dd><a href="#">配送运费</a></dd>
+					<dd><a href="#">配送查询</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>支付方式
+					<dd><a href="#">在线支付</a></dd>
+					<dd><a href="#">货到付款</a></dd>
+					<dd><a href="#">银行汇款</a></dd>
+				</dt>
+			</dl>
+			<dl class="footlist_falls1">
+				<dt>售后服务
+					<dd><a href="#">退换货自助申请</a></dd>
+					<dd><a href="#">退换货政策</a></dd>
+					<dd><a href="#">退换货流程</a></dd>
+					<dd><a href="#">退款说明</a></dd>
+					<dd><a href="#">CEO邮箱</a></dd>
+				</dt>
+			</dl>
+			<dl id="footlist_falls2">
+				<dt>走秀微信客服
+					<dd></dd>
+				</dt>
+			</dl>
+		</div>
+	</div>
+</div>
+<!--***********************footlist2**********************-->
+<div id = 'footlist2'>
+	<ul>
+		<li><a href="#">关于走秀</a>|</li>
+		<li><a href="#">About us</a>|</li>
+		<li><a href="#">媒体报道</a>|</li>
+		<li><a href="#">品牌招商</a>|</li>
+		<li><a href="#">加入走秀</a>|</li>
+		<li><a href="#">网站地图</a>|</li>
+		<li><a href="#">联系我们</a>|</li>
+		<li><a href="#">品牌大全</a>|</li>
+		<li><a href="#">邮件订阅</a>|</li>
+		<li><a href="#">品牌专题</a>|</li>
+		<li><a href="#">WAP站点</a>|</li>
+	</ul>
+</div>
+<!--***********************footlist3**********************-->
+<div id = 'footlist3'>
+	<img src="image/foot_icons.jpg"/>
+</div>
+<!--***********************footlist4**********************-->
+<div id = 'footlist4'>
+	<p>Copyright@<script type="text/javascript">
+		document.write(new Date().getFullYear());
+	</script>20160919 Xiu.com深圳走秀网络科技有限公司 版权所有. 粤ICP备07502993号</p>
+</div>
+<!--***********************footlist5**********************-->
+<div id = 'footlist5'>
+	<div id = "footlist5_img">
+		<a href="#"><img src="image/c_01.jpg" /></a>
+		<a href="#"><img src="image/c_02.jpg" /></a>
+		<a href="#"><img src="image/c_03.jpg" /></a>
+		<a href="#"><img src="image/c_04.jpg" /></a>
+		<a href="#"><img src="image/c_05.jpg" /></a>
+		<a href="#"><img src="image/c_06.jpg" /></a>
+		<a href="#"><img src="image/c_08.jpg" /></a>
+		<a href="#"><img src="image/c_09.jpg" /></a>
+		<a href="#"><img src="image/c_10.jpg" /></a>
+	</div>
+	
+</div>
+</body>
+</html>

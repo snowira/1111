@@ -1,0 +1,380 @@
+@charset "utf-8";
+/* 2012-10-21 */
+
+.layout-header{ position:relative; height:60px;}
+/*.header-slogan{ display:block; position:absolute; width:260px; height:26px; right:3px; bottom:15px; background:url(../image/slogan.png) no-repeat 0 0;}*/
+
+
+.regist-hd .fast-a,
+.regist-tab s,
+.shadow-input,
+.get-code .btn,
+.get-code-btn,
+.regist-form s,
+.reg-btn,
+.regist-tab i,
+.api-login b,
+.alert-tip b,
+.login-btn,
+.login-err-msg b{ background:url(https://login.xiu.com/resources/user/css/img/regist_01.png) no-repeat 999em 0}
+
+.shadow-input:focus,.shadow-input-focus{background:#fff;}
+
+
+/* ----------------- 注册页bar ------------------- */
+.regist-page{/* border-top:0 none;height:520px; overflow:visible;*/text-shadow:#fff 0px 1px 0px;width:100%;border-top:1px solid #e5e5e5;}
+.regist-bgcolor{ position:relative; height:100%}
+.regist-theme{height:520px; display:none; z-index:0; background-repeat:no-repeat;background-position:center 0;}
+.regist-theme .theme-href{ display:none;border:1px solid black; width:590px; height:100%; position:absolute; top:0; right:0; z-index:2}
+.regist-nav{zoom:1;}
+.regist-hd .tit{ font-size:14px; float:left; padding-left:10px; line-height:36px;}
+
+
+/* --------------- 表单 --------------------- */
+.regist-form-box{ /*position:absolute; top:0; left:50%;margin-left:-250px;*/margin:50px auto 0;}
+.regist-panel{width:500px;margin:0 auto;overflow:hidden;zoom:1; position:relative; z-index:10;}
+.regist-form{padding-bottom:30px;z-index:1;zoom:1;/*background-color:#fff;filter:alpha(opacity=90); -moz-opacity:0.9;  opacity: 0.9;*/overflow:hidden; position:relative}
+.regist-form-opacity-bg{ position:absolute; z-index:0; top:0; left:0; width:646px; height:1000px; background-color:#fff;filter:alpha(opacity=90); -moz-opacity:0.9;opacity: 0.9;}
+.regist-form a{ color:#005ba1;}
+.regist-form li{ padding-left:18px; position:relative; margin-top:10px; clear:both;zoom:1;}
+.regist-form li:after{clear:both;content:".";display:block;height:0;visibility:hidden;_height:1%;}
+.regist-form .tit{position:absolute; width:120px; text-align:right; left:0; top:3px; height:30px;line-height:28px;*line-height:30px; line-height:28px\9; font-size:14px;}
+.regist-form .reds{position:absolute; width:18px; text-align:center;color:#d2041f; left:0; top:3px; height:34px;line-height:34px;}
+.regist-form .rtext{width:460px; height:24px;line-height:24px;border:1px solid #d8d8d8;color:#464646;padding:5px 10px;font-size:12px; position:relative;}
+.regist-form .input-tip{color:#afafaf;padding:0 3px;height:20px;line-height:20px;background:#fff;font-size:12px; position:absolute; left:8px; top:9px;cursor:text}
+.regist-form .li-mob .rtext{width:340px;}
+.regist-form em{ color:#f00; margin-right:5px}
+.regist-form .rtext-disabled{ background-color:#f3f3f3}
+/*.regist-form .li-ac,.regist-form .li-pw,.regist-form .li-mob{ margin-top:20px;}*/
+.regist-form .li-ac .rtext{float:left}
+.regist-form .email-ac .rtext{ width:100px;}
+.regist-form .li-ac .authcode-img{ float:left}
+.regist-form .li-ac img{ width:100px; height:36px; margin-left:10px; float:left}
+.regist-form .li-ac .change-code{ float:left; margin-top:15px; margin-left:10px;}
+.regist-form .pure-box{ width:482px; float:left; position: relative;}
+.regist-form .pure-box .fakePlaceholder {position: absolute; left: 5px;top: 0;font-size: 12px;color: #afafaf; height: 37px;line-height: 37px;width: 275px}
+.regist-form .notice-box{width:480px; height:24px;float:left; margin-left:1px; position:relative;zoom:1; }
+.regist-form p{ height:24px;/* border:1px solid #efede0; background-color:#fef8f8;*/ line-height:24px; padding:0 10px; position:relative; float:left; color:#666}
+.regist-form .notice-box p{ display:none}
+.regist-form .note{}
+.regist-form .err{ border-color:#cf3e0d; padding-left:20px; color:#cc0000}
+.regist-form s{ display:block; position:absolute; width:16px; height:16px; background-position:-260px 0; top:5px; left:1px;}
+.regist-form .err s{ background-position:-280px 0}
+.regist-form .note s{ display:none}
+.regist-form .ok{ background-color:#fff; border-color:#fff; color:#3D882D; padding-left:25px;}
+.regist-form .ok s{ left:5px}
+.regist-form .li-deal{ margin:5px;}
+.regist-form .li-deal .pure-box{ line-height:24px;}
+.regist-form .li-deal input{ margin:0 5px 0 0}
+.regist-form .li-deal a{ color:#4d90c2}
+.regist-form .li-btn .pure-box{width:300px;}
+.regist-form .fast-login{width:120px;float:right; height:20px; line-height:20px; margin-top:10px;}
+.regist-form .fast-login span{ color:#888}
+.regist-page{ position:relative; zoom:1}
+
+.regist-form .focus{outline:none;border-color:#7fbfe7;}
+.regist-form .focus_tip{color:#afafaf;top:-10px;}
+/*错误提示*/
+.regist-form .error{outline:none;border-color:#d2041f;}
+.regist-form .error_tip{color:#d2041f;top:-10px;}
+
+.regist-form .autologinb{position:relative;}
+.regist-form .autologinb span{display:block;position:absolute;left:0;top:0;width:16px;height:16px;background:url(/static/css/default/img/login_sprite.png) -160px 0px no-repeat;}
+.regist-form .checked span{background-position:-180px 0;}
+
+/*.regist-tip{ border:1px solid #e1e1e1; width:250px;position:absolute; top:35px; cursor:default; right:0px;text-align:center; padding:30px 0;background:linear-gradient(top,#ffffff,#f8f8f8); background:-moz-linear-gradient(top,#ffffff,#f8f8f8); background:-webkit-linear-gradient(top,#ffffff,#f8f8f8); background:-o-linear-gradient(top,#ffffff,#f8f8f8);filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#f8f8f8);background:-ms-linear-gradient(top,#ffffff,#f8f8f8);}*/
+.regist-tip{ border:1px solid #e1e1e1; width:250px;position:absolute; top:35px; cursor:default; right:0px;text-align:center; padding:30px 0;}
+.regist-tip h3{ font-size:16px; color:#777; font-weight:normal; font-family:'微软雅黑' !important;}
+.regist-tip p{ margin-top:10px;text-align:center; color:#999}
+
+.login_twarp{background:#f9f9f8;position:relative;margin:0 auto;}
+.login_twarp h2{width:1200px;height:58px;margin:0 auto;line-height:58px; color:#464646;font-size:16px;}
+.login_twarp h2 span{ font-weight:normal;font-size:16px; margin-left:10px;}
+.login_twarp h2 span a{color:#d2041f;text-decoration:none;margin-left:3px;}
+.login_twarp h2 span a span.blue{margin-left:0;color:#005ba1;font-size:13px;}
+.login_twarp h2 span a:hover{text-decoration:underline;}
+.login_twarp h2 .hasUserName{float:right;color:#d2041f;font-size:13px; font-weight:normal;}
+
+.regist-form .get-code{ margin-top:5px;}
+.get-code .btn,.get-code-btn{ width:135px; height:28px; background-color:#f6f6f6; background-position:0 -150px; color:#000; border:0 none; display:block; line-height:28px; text-align:center; font-weight:bold; float:left}
+.get-code .btn:hover,.get-code-btn:hover{ text-decoration:none; background-position:-140px -150px;}
+.get-code .send-success{color:#3D882D}
+.get-code .code_wait{ height:28px; color:#999; float:left;}
+.get-code .code_wait span{ display:none}
+.get-code .code_wait .time{ padding:0 2px; color:#e4796c; margin:0}
+.get-code .pure-box{ width:350px}
+
+.reg-btn{width:300px; height:40px; line-height:40px;border:0 none;background:url(/static/css/default/img/login_sprite.png) 0px -40px no-repeat;color:#fff; font-size:14px; cursor:pointer;}
+
+.regist-form .li-pw-strength #J_pw_strength{margin-top:5px;}
+.li-pw-strength .show{ width:85px; color:#999; float:left;}
+.strength-box .strength-step{ display:block;width:190px; height:10px; line-height:0; font-size:0; font-family:Arial; float:left; margin-top:7px;}
+.strength-box .strength-step b{ height:6px; border:2px solid #fff; background-color:#f0f0f0; line-height:0; font-size:0; border-right:0; float:left; display:block; width:45px}
+.strength-box .low .step-1{ background-color:#ffe2c4}
+.strength-box .low .step-2{}
+.strength-box .low .step-3{}
+.strength-box .mid .step-1{background-color:#ffe2c4}
+.strength-box .mid .step-2{background-color:#ffa467}
+.strength-box .mid .step-3{}
+.strength-box .high .step-1{background-color:#ffe2c4}
+.strength-box .high .step-2{background-color:#ffa467}
+.strength-box .high .step-3{background-color:#ff6600}
+
+/* --------------- 切换TAB --------------------- */
+.regist-tab{ height:40px;zoom:1;}
+.regist-tab li{ 
+height:40px; float:left;width:323px; cursor:pointer; position:relative; z-index:300;background:linear-gradient(top,#ffffff,#f8f8f8); background:-moz-linear-gradient(top,#ffffff,#f8f8f8); background:-webkit-linear-gradient(top,#ffffff,#f8f8f8); background:-o-linear-gradient(top,#ffffff,#f8f8f8);filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#f8f8f8);background:-ms-linear-gradient(top,#ffffff,#f8f8f8);}
+
+.regist-tab a{ height:39px;line-height:37px; overflow:hidden; text-align:center; font-size:14px; color:#000; position:relative; text-shadow:#fff 0px 1px 0px;text-align:center;border-bottom:1px solid #bebebe; cursor:pointer;  float:left; width:323px;zoom:1;}
+.regist-tab a s{ display:block;cursor:pointer; position:absolute;}
+.regist-tab .mobile-hover,.regist-tab .email-hover{background:none;filter:none;}
+.regist-tab .mobile-hover a,.regist-tab .email-hover a{ color:#000;border-bottom:0 none; width:322px}
+.regist-tab a:hover{text-decoration:none;}
+.regist-tab .mobile-hover a:hover,.regist-tab .email-hover a:hover{ text-decoration:none}
+.regist-tab .mobile-hover a{font-weight:bold; color:#cc1403; border-right:1px solid #929292; width:322px;}
+.regist-tab .email-hover a{ font-weight:bold;color:#cc1403;border-left:1px solid #929292;}
+.regist-tab .mobile s{ width:16px; height:26px; top:6px; left:110px; background-position:-205px 0}
+.regist-tab .email s{ width:23px; height:17px; top:11px; left:112px; background-position:-230px 0}
+.regist-tab .mobile-hover s{background-position:-150px 0}
+.regist-tab .email-hover s{background-position:-175px 0}
+.regist-tab .mobile span{ margin-left:50px ;cursor:pointer;}
+.regist-tab .email span{ margin-left:60px;cursor:pointer;}
+
+/*--------------- 扫码密码登录切换----------------*/
+.login_codego{width:60px;height:60px;background:url(/static/css/default/img/login_sprite.png) 0 -400px no-repeat;position:absolute;right:0;bottom:0;z-index:100;}
+.login_pcgo{width:60px;height:60px;background:url(/static/css/default/img/login_sprite.png) -70px -400px no-repeat;position:absolute;right:0;bottom:0;z-index:100;}
+.login_ewmg{width:85px;height:25px;background:url(/static/css/default/img/login_sprite.png) 0 -360px no-repeat;position:absolute;right:55px;bottom:12px;z-index:100;}
+.login_ewmb{width:85px;height:25px;background:url(/static/css/default/img/login_sprite.png) -100px -360px no-repeat;position:absolute;right:55px;bottom:12px;z-index:100;}
+
+/*--------------- 扫码登录 ---------------------*/
+.login_code_t{padding:30px;}
+.login_code{width:300px;margin:40px auto;text-align:center;}
+.login_code_img{margin:10px auto 30px;width:150px;height:150px;padding:10px;border:1px solid #efeff4;position:relative;}
+.login_code_img img{width:150px;height:150px;}
+.login_code_lose{width:170px;height:170px;position:absolute;left:0;top:0;}
+.login_code_losebg{width:170px;height:170px;background:#fff;opacity:.8;position:absolute;left:0;top:0;}
+.login_code_losebc{width:170px;height:170px;position:absolute;left:0;top:0;}
+.login_code_losebc h3{padding-top:45px;text-shadow:none;}
+.login_code_losebc a{display:block;margin:15px auto;text-shadow:none;text-align:center;color:#fff;font-size:14px;width:120px;height:34px;line-height:34px;background:url(/static/css/default/img/login_sprite.png) -200px -360px no-repeat;}
+.login_code_losebc a:hover{color:#fff;text-decoration:none;background-position:-330px -360px;}
+.login_code p{font-size:14px;}
+.login_code p span{color:#d2041f;}
+.login_code p span a{color:#d2041f;text-decoration: none;}
+.login_code_ok{width:95px;height:95px;margin:30px auto;background:url(/static/css/default/img/login_sprite.png) -150px -400px no-repeat;}
+.login_code_okt{padding:0 0 15px;}
+
+/*--------------- 登录页面 ---------------------*/
+.login-page{ border-top:1px solid #e5e5e5;padding:0;overflow:visible;text-shadow:#fff 0px 1px 0px;}
+.login-bgcolor{ position:relative;width:100%;height:700px;}
+.login-box{ height:560px;position:absolute; top:70px; left:50%; margin-left:-600px; z-index:1}
+.login-theme{width:100%;height:560px;position:absolute; top:0;left:50%;margin-left:-50%;padding:70px 0;/*background:#f7f2ec url(https://login.xiu.com/resources/user/css/img/logobox_bg.jpg) no-repeat center center;*/ z-index:0;}
+.login-theme .theme-href{ display:none; width:590px; height:100%; position:absolute; top:0; right:0; z-index:2}
+
+.login-panel{ background:#fff;width:420px;height:560px;position:absolute;top:0;right:30px;z-index:10;border:1px solid #d8d8d8;box-shadow:0px 0px 20px #c8c8c8;}
+.login-tab{ height:52px;}
+.login-tab li{ float:left; width:250px;background:#f7f7f9;}
+.login-tab li a{color:#afafaf;float:left; width:250px;height:50px;text-align:center;line-height:50px; font-size:16px;border-bottom:2px solid #f7f7f9;}
+.login-tab li a:hover,.login-tab li a.active{color:#464646;text-decoration:none;font-weight:700;border-color:#464646;}
+.login-tab .xiu a{ border-right:1px solid #A0A0A0;}
+.login-poptit{color:#464646;background:#f7f7f9;height:50px;line-height:50px; font-size:16px;font-weight:700;padding:0 0 0 20px;}
+
+.login-form{width:302px;margin:30px auto 0;}
+.login-form a{ color:#005ba1}
+.login-form li{margin-top:24px; position:relative;zoom:1;}
+.login-form li p{margin:12px 0 -8px;color:#afafaf;}
+.login-form .err-msg{ margin-top:10px; margin-bottom:-5px;}
+.login-form .find-ps{ position:absolute; top:40px; left:245px; color:#999}
+.login-form .find-ps:hover{color:#333}
+.login-form .ltext{width:280px; height:24px;line-height:24px;border:1px solid #d8d8d8;color:#464646;padding:5px 10px;font-size:12px; position:relative;}
+.login-form .input-tip{color:#afafaf;padding:0 3px;height:20px;line-height:20px;background:#fff;font-size:12px; position:absolute; left:8px; top:9px;cursor:text}
+.login-form .lcheck{ vertical-align:middle; margin-right:5px;/*visibility:hidden;*/}
+.login-form .check-opt label{ margin-right:20px}
+.login-btn{ float:left; width:300px; height:40px; line-height:40px;border:0 none;background:url(/static/css/default/img/login_sprite.png) 0px -40px no-repeat;color:#fff; font-size:14px; cursor:pointer;}
+.login-btn:hover{background-position:0 -90px;}
+.login-form .login-btnu{color:#fff;float:right;margin-right:43px;width:104px; height:35px; line-height:35px;text-decoration:none;text-shadow:none;font-weight:bold;background:url(/static/css/default/img/userCenter/regist_01.png) no-repeat 999em 0;background-position:0 -75px;font-size:14px;text-align:center;}
+.login-form .login-btnu:hover{text-decoration:none;color:#fff;}
+.login-form .regist-entry{ float:left; margin-top:18px; margin-left:15px;}
+.login-form .authcode{/*overflow:hidden;*/}
+.login-form .authcode .ltext{ width:105px; float:left}
+.login-form .code-img{ vertical-align:middle; float:left; margin-left:12px;}
+.login-form .code-img img{height:35px; border:0 none;width:80px;}
+.login-form .change-code{ float:left; margin-left:12px; margin-top:8px;}
+.login-form .msgcode{}
+.login-form .msgcode .ltext{ width:165px; float:left}
+.login-form .autologin{/*overflow:hidden;*/}
+.login-form .getpassreg{float:right;}
+.login-form .getpass{ color:#464646;}
+.login-form .autologinb{position:relative;}
+.login-form .autologinb span{display:block;position:absolute;left:0;top:0;width:16px;height:16px;background:url(/static/css/default/img/login_sprite.png) -160px 0px no-repeat;}
+.login-form .checked span{background-position:-180px 0;}
+.login-form .focus{outline:none;border-color:#7fbfe7;}
+.login-form .focus_tip{color:#afafaf;top:-10px;}
+.msgisok {position:absolute;left:105px;top:10px;width:16px;height:16px;background:url(/static/css/default/img/login_sprite.png) -220px 0px no-repeat;}
+.msgerror {position:absolute;left:105px;top:10px;width:16px;height:16px;background:url(/static/css/default/img/login_sprite.png) -261px 0px no-repeat;}
+/*错误提示*/
+.login-form .error{outline:none;border-color:#d2041f;}
+.login-form .error_tip{color:#d2041f;top:-10px;}
+.login-err-msg{color:#d2041f; line-height:12px; font-size:12px; position:relative; padding:0 40px 0 20px;display:block}
+.login-err-msg b{ display:none; width:12px; height:12px; background:url(/static/css/default/img/login_sprite.png) -200px 0px no-repeat;position:absolute; left:0px; top:0px;}
+.login-err-msg .note{color:#afafaf;margin-left:-20px;}
+
+/*警告提示*/
+.alert-tip{ display:block; line-height:12px; position:absolute;border:1px solid #F1D47C; background-color:#FFFCD1; color:#DE6907; padding:3px;}
+.alert-tip i{ display:block; width:7px; height:7px; background-color:#FFFCD1; line-height:0; font-size:0; border:1px solid #F1D47C; border-bottom:0 none; border-right:0 none;
+transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg); position:absolute; top:-5px;top:-5px\9;left:35px; z-index:2;
+/*filter:"progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678,M12=-0.70710678,M21=0.70710678,M22=0.70710678,SizingMethod='auto expand')";*/
+}
+.alert-tip i{ display:none;}
+.alert-tip b{ display:block; width:15px; height:7px; background-position:-12px -50px; line-height:0; font-size:0; position:absolute; top:-7px; left:50px;}
+.autologin .alert-tip{ display:none; left:0px; top:22px; width:240px;z-index:10;font-size:12px;}
+.autologin .alert-tip i{ left:50px;}
+/*IE6 7 8 arr*/
+
+.alert-tip b.outlet{display:block; width:0; height:0; border:0 0 6px 0; position:absolute; top:0; left:0;}
+
+.bindphone_canel{float:left;border:none;outline:none;cursor:pointer;display: block;width: 120px;height: 40px;line-height: 40px;background: url(/static/css/default/img/login_sprite.png) -130px -140px no-repeat;text-align: center;font-size: 14px;color: #464646;}
+.bindphone_okgo{float:right;border:none;outline:none;cursor:pointer;display: block;width: 120px;height: 40px;line-height: 40px;background: url(/static/css/default/img/login_sprite.png) 0 -140px no-repeat;text-align: center;font-size: 14px;color: #fff;}
+.login-form .binded p {margin:40px 0;text-align:center;color:#464646;}
+.login-form .binded p .red{color:#d2041f;}
+
+/*合作API*/
+.login-extinfo{ /*background-color:#f9f9f9;text-shadow:0 1px 0 #fff*/ width:300px;margin:0 auto;padding:30px 0 0;}
+.login-extinfo .optbar{ display:block; height:20px;line-height:20px;margin:-15px 0 25px;zoom:1;position:relative;border-bottom:1px solid #e7e7e7;}
+.login-extinfo .optbar .tit{position:absolute;left:50%;top:10px;margin:0 0 0 -60px;background:#fff;width:120px;height:20px;line-height:20px;text-align:center;}
+.login-extinfo .optbar b{cursor:pointer; display:block; width:0; height:0; overflow:hidden; border-width:4px; border-style:solid; border-color:#888 #F9F9F9 #F9F9F9; position:absolute; top:17px; right:0;}
+.login-extinfo .optbar b.up{border-color:#F9F9F9 #F9F9F9 #888;top:13px;}
+.api-login{width:270px;height:30px;margin:0 auto;zoom:1}
+.api-login li{ float:left; width:30px;height:30px; margin:0 30px 0 0;overflow:hidden; zoom:1}
+.api-login li.last{margin:0;}
+.api-login li a{opacity:.8;display:block;width:30px;height:30px;background:url(/static/css/default/img/login_sprite.png) no-repeat;transition:all .3s;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;}
+.api-login li a:hover{opacity:1;}
+.api-login a.api-qq{ background-position:0 0}
+.api-login a.api-wechat{ background-position: -30px 0;}
+.api-login a.api-sina{ background-position:-60px 0;}
+.api-login a.api-alipay{background-position:-90px 0;}
+.api-login a.api-139{background-position:-120px 0;}
+.api-login a.api-pingan{background-position:-120px 0;}
+
+
+/*--登录面板背景--*/
+/*AlphaImageLoader需要改为绝对路径*/
+.login-panel-ieshadow{ width:360px; position:absolute; z-index:0; right:21px;top:0; overflow:hidden}
+.login-panel-ieshadow b{ display:block; position:absolute; line-height:0; font-size:0;}
+.login-panel-ieshadow .vertical{ background:url(https://login.xiu.com/assets/static/image/login-panel-shadow-vertical.png) 0 0 no-repeat;_background:none;top:0;right:0; width:9px; height:300px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src="https://login.xiu.com/assets/static/image/login-panel-shadow-vertical.png");}
+.login-panel-ieshadow .horizont{ background:url(https://login.xiu.com/assets/static/image/login-panel-shadow-horizont.png) 0 0 no-repeat;_background:none;bottom:0;left:0; width:351px; height:9px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src="https://login.xiu.com/assets/static/image/login-panel-shadow-horizont.png");}
+.login-panel-ieshadow .corner{ background:url(https://login.xiu.com/assets/static/image/login-panel-shadow-corner.png) 0 0 no-repeat;_background:none;bottom:0;right:0; width:9px; height:9px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src="https://login.xiu.com/assets/static/image/login-panel-shadow-corner.png");}
+
+
+/*--注册面板背景--*/
+/*AlphaImageLoader需要改为绝对路径*/
+.regist-form-ieshadow{height:500px;width:650px; position:absolute; z-index:0; top:0;overflow:hidden;left:50%;margin-left:-475px; }
+.regist-form-ieshadow b{ display:block; position:absolute; line-height:0; font-size:0;}
+.regist-form-ieshadow .vertical{ background:url(https://login.xiu.com/assets/static/image/login-panel-shadow-vertical.png) 0 0 no-repeat;_background:none;top:0;right:-2px; width:9px; height:300px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src="https://login.xiu.com/assets/static/image/login-panel-shadow-vertical.png");}
+.regist-form-ieshadow .horizont{ background:url(https://login.xiu.com/assets/static/image/login-panel-shadow-horizont.png) 0 0 repeat-x;_background:none;bottom:-2px;left:0; width:643px; height:9px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src="https://login.xiu.com/assets/static/image/login-panel-shadow-horizont.png");}
+.regist-form-ieshadow .corner{ background:url(https://login.xiu.com/assets/static/image/login-panel-shadow-corner.png) 0 0 no-repeat;_background:none;bottom:-2px;right:-1px; width:8px; height:8px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src="https://login.xiu.com/assets/static/image/login-panel-shadow-corner.png");}
+
+
+/*.g-footer{ margin-top:60px}*/
+.login-body .g-footer{ border-top:0 none;margin-top:20px}
+
+/**图片验证码弹出对话框**/
+.regist-form .text_value{color:#afafaf; font-size:12px!important }
+.pic_yz{  height:215px; background:#fff;}
+.pic_yz  h3{margin: 0px auto 10px auto;height:28px; line-height:28px; border-bottom:1px solid #d3d3d3; font-size:14px; padding-left:3px; }
+.pic_yz h3 a.close{ display:inline-block; background:url(https://login.xiu.com/resources/user/css/img/register_btn.jpg) no-repeat -2px -6px; width:15px; height:15px; float:right; margin:9px 5px 0px 0px;}
+.tac_ce{ width:190px; margin:0 auto; padding-top:15px;margin-left: 75px;}
+.tac_ce p{ padding-bottom:10px; height:35px;}
+.tac_ce p.yimg img,.tac_ce p.yimg a{ display:inline-block; vertical-align:middle;}
+.tac_ce p.yimg a{ padding-left:5px; color:#4c8ec0;}
+.tac_ce p input.yz{ background:url(https://login.xiu.com/resources/user/css/img/register_btn.jpg) no-repeat left -49px; width:105px; height:36px; border:none;line-height:36px;}
+.tac_ce p input.submit{background:url(https://login.xiu.com/resources/user/css/img/register_btn.jpg) no-repeat left -96px; width:105px; height:36px; border:none; cursor:pointer;}
+
+/**联合登陆页面 2015-01-22 jason.peng add**/
+.union-top{font-size:20px;font-weight:700;margin:0 0 20px;}
+.union-top a{float:right;font-size:12px;font-weight:normal;text-decoration:underline;color:#336699;margin:0 80px 0 0;}
+.union-login,.union-reg{float:left;margin:0 0 0 80px;background-color:#fff;width:350px;height:380px;padding:15px;border:1px solid #a0a0a0;box-shadow:3px 3px 4px #ccc;box-shadow:3px 3px 5px #ccc\0;-moz-box-shadow:3px 3px 4px #ccc;-o-box-shadow:3px 3px 4px #ccc;-webkit-box-shadow:3px 3px 4px #ccc;}
+.union-login h3,.union-reg h3{font-size:16px;border-bottom:1px solid #000;line-height:36px;}
+.union-login-form{}
+.union-login-form a{ color:#4D90C2}
+.union-login-form li{ margin-top:22px; position:relative;zoom:1;}
+.union-login-form .union-login-lab{margin:0 10px 0 0;font-size:14px;}
+.union-login-form .err-msg{ margin-top:10px; margin-bottom:-10px;}
+.union-login-form .find-ps{ position:absolute; top:40px; left:245px; color:#999}
+.union-login-form .find-ps:hover{color:#333}
+.union-login-form .ltext{width:240px; height:19px; border:1px solid #c0c0c0; padding:5px 5px; font-size:16px; position:relative;}
+.union-login-form .input-tip{color:#999; height:25px; line-height:25px; line-height:27px\0;*line-height:27px;font-size:14px; position:absolute; left:75px; top:5px;  cursor:text}
+.union-login-form .lcheck{ vertical-align:middle; margin-right:3px}
+.union-login-form .check-opt label{ margin-right:20px}
+.union-login-form .login-btn{ margin:0 0 0 64px;}
+.union-login-form  .regist-entry{ float:left; margin-top:18px; margin-left:15px;}
+.union-login-form .authcode{ overflow:hidden;}
+.union-login-form .authcode .ltext{ width:105px; float:left}
+.union-login-form .code-img{ vertical-align:middle; float:left; margin-left:10px;}
+.union-login-form .code-img img{height:35px; border:0 none; width:105px;}
+.union-login-form .change-code{ float:left; margin-left:10px; margin-top:17px;}
+
+.union-reg{margin:0 0 0 40px;}
+.union-regist-form{ padding-bottom:30px;z-index:1;zoom:1;/*background-color:#fff;filter:alpha(opacity=90); -moz-opacity:0.9;  
+opacity: 0.9;*/  overflow:hidden; position:relative}
+.union-regist-form a{ color:#4D90C2}
+.union-regist-form li{ padding-left:80px; position:relative;clear:both;zoom:1;}
+.union-regist-form li:after{clear:both;content:".";display:block;height:0;visibility:hidden;_height:1%;}
+.union-regist-form .tit{position:absolute; width:80px; text-align:right; left:0; top:3px; height:30px;line-height:28px;*line-height:30px; line-height:28px\9; font-size:14px;}
+.union-regist-form .rtext{width:235px; height:19px; border:1px solid #a0a0a0; padding:5px 5px; font-size:16px;}
+.union-regist-form em{ color:#f00; margin-right:5px}
+.union-regist-form .rtext-disabled{ background-color:#f3f3f3}
+.union-regist-form .li-ac,.union-regist-form .li-pw,.union-regist-form .li-mob{ margin-top:5px;}
+.union-regist-form .li-ac .rtext{float:left}
+.union-regist-form .email-ac .rtext{ width:100px;}
+.union-regist-form .li-ac .authcode-img{ float:left}
+.union-regist-form .li-ac img{ width:100px; height:28px; margin-left:10px; float:left}
+.union-regist-form .li-ac .change-code{ float:left; margin-top:15px; margin-left:10px;}
+.union-regist-form .pure-box{ width:270px; float:left; position: relative;}
+.union-regist-form .pure-box .fakePlaceholder {position: absolute; left: 5px;top: 0;font-size: 12px;color: #afafaf; height: 28px;line-height: 28px;width: 270px}
+.union-regist-form .notice-box{width:270px; height:28px;float:left; position:relative;zoom:1; }
+.union-regist-form p{ height:28px;/* border:1px solid #efede0; background-color:#fef8f8;padding:0 10px;*/ line-height:28px;  position:relative; float:left; color:#666}
+.union-regist-form .notice-box p{ display:none}
+.union-regist-form .note{}
+.union-regist-form .err{ border-color:#cf3e0d; color:#cc0000}
+.union-regist-form s{ display:block; position:absolute; width:16px; height:16px; background-position:-260px 0; top:10px; left:5px;}
+.union-regist-form .err s{ background-position:-280px 0}
+.union-regist-form .note s{ display:none}
+.union-regist-form .ok{ background-color:#fff; border-color:#fff; color:#3D882D;}
+.union-regist-form .ok s{ left:5px}
+.union-regist-form .li-deal{ margin-top:0px}
+.union-regist-form .li-deal .pure-box{ line-height:20px;margin:0 0 10px}
+.union-regist-form .li-deal input{ margin:0 5px 0 0}
+.union-regist-form .li-deal a{ color:#4d90c2}
+.union-regist-form .li-btn .pure-box{width:180px;}
+.union-regist-form .fast-login{width:120px;float:left; height:20px; line-height:20px; margin-top:20px;}
+.union-regist-form .fast-login span{ color:#888}
+a.get-code-btn{float:left;color:#000;margin:0 0 0 10px;}
+
+/**手机验证登陆 2015-05-20 jason.peng add**/
+.phone_login,.normal_login{text-align:right;padding-left:110px;font-size:13px;font-weight:normal;text-decoration:underline;}
+.normal_login{padding-left:120px;}
+.phone_login:hover,normal_login:hover{color:#ea7515;}
+.phone_login i{display:inline-block;width:10px;height:13px;background:url(img/login_phone.png) no-repeat;margin:3px 0 0 3px;}
+.normal_login i{display:inline-block;width:14px;height:13px;background:url(img/login_phone.png) -15px 0 no-repeat;margin:3px 0 0 3px}
+.phone_login_tip{width:290px;margin:15px auto 0;color:red;line-height:20px;}
+a.phone_login_btn{float:right;text-shadow:none;font-size:13px;width:100px;height: 34px;line-height:34px;text-decoration:none;background:#f7f7f9;color: #464646;border:1px solid #ccc;display: block;text-align: center;}
+a.phone_login_btn2{float:right;text-shadow:none;font-size:13px;width:100px;height: 34px;line-height:34px;text-decoration:none;background:#f7f7f9;color: #464646;border:1px solid #ccc;display: none;text-align: center;}
+a.phone_login_btn:hover{background-position:0 -37px;}
+a.phone_login_btn2 .time{color:#ccc;font-size:13px;}
+.login_disable{background:url(/static/css/default/img/login_sprite.png) 0px -90px no-repeat;cursor:default;}
+
+/** login_pop*/
+.clfix:after{clear:both;content:".";display:block;height:0;visibility:hidden;_height:1%;}
+.login-panel-pop{width:100%;height:530px;position:relative;/*border:1px solid #dfdfdf;*/width:500px;margin:0 auto;font-size:12px;}
+.login-form .input-tip{margin:0 !important;}
+.autologinb{margin:0 !important;display:inline !important;}
+.login-panel-close{width:14px;height:14px;background:url(/static/css/default/img/login_sprite.png) -240px 0px no-repeat;position:absolute;right:10px;top:16px;text-indent:-9999em;}
+
+
+
+
+
+
+
+
+

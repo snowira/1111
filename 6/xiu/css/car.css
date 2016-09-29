@@ -1,0 +1,43 @@
+@charset "utf-8";
+#dirve{width: 950px;margin:0 auto;height: 76px;border-bottom: 1px solid #000;overflow: hidden;}
+#dirve a{margin-top: 12px;margin-left: 13px;float: left;}
+#dirve p{width: 600px;}
+#dirve .right{text-align: right;width: 600px;float: right;margin-top: 19px;font-size: 12px;color:#151515;}
+#dirve .right .p1{margin-bottom: 23px;}
+#dirve .right .p1 span{color: #f26521;font-weight: bold;}
+
+#drive_nav{width: 950px;margin:0 auto;height: 50px;padding-top: 15px;margin-bottom: 25px;}
+#drive_nav ul li {float: left;width: 316px;height: 24px;font-size: 14px;line-height: 24px;text-align: center;}
+#drive_nav .nav1{background: #82bf38;color: #fff;}
+#drive_nav .nav1 .nav1_span1{width: 24px;height: 32px;float: right;background:url(../image/car/s_shop1.gif);margin-top: -5px;}
+#drive_nav .nav2{background: #e2e2e2;color: #5b5b5b;}
+#drive_nav .nav2 .nav2_span2{width: 24px;height: 32px;float: right;background:url(../image/car/s_shop1.gif) no-repeat -27px 0;margin-top: -5px;}
+#drive_nav .nav3{background: #e2e2e2;color: #5b5b5b;}
+
+#drive_Main{width: 948px;min-height: 90px;border: 1px solid #d6d3d3;background-color: #f6f6f6;margin:0 auto;overflow: hidden;margin-bottom: 12px;}
+#drive_Main .drive_img{margin-top: 17px;margin-left: 200px;float: left;}
+#drive_Main h2{width: 373px;height: 41px;padding: 10px;font-size: 12px;float: left;line-height: 40px;margin-top: 25px;}
+#drive_foot{height: 43px;line-height: 43px;text-align: center;width: 950px;margin:0 auto;color: #7d7d7d;font-size: 12px;border-top: 1px solid #999;}
+
+#drive_Main .ttimg{float: left;margin-top: 20px;margin-left: 90px;margin-right: 50px;}
+
+#drive_Main .ttimgr{float: left;font-size: 12px;margin-top: 20px;color: #5b5b5b};
+#drive_Main .ttimgr .p1{font-size: 14px;color: #000;}
+#drive_Main .delete{float: right;font-size: 12px;text-decoration:underline;margin-top: 38px;margin-right: 100px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
